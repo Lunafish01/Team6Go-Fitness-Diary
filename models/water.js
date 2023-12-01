@@ -44,7 +44,7 @@ water.init(
 }
 );
 
-});
+
 
 
 module.exports = water;
