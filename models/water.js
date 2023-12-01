@@ -1,21 +1,50 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class Food extends Model {}
+class water extends Model {}
 
-Food.init({
+
+water.init(
+  {
   id: {
-
+    type: DataTypes.INTEGER,
+    primaryKey: true,
+    allowNull: false,
+    autoincrement: true,
   },
   user_id: {
-
+    type: DataTypes.INTEGER,
+    allowNull: false,
+    references: {
+      model: "user",
+      key: "id",
+    },
   },
-  food_name: { 
-
+  date: { 
+    type: DataTypes.DATE,
+    allowNull: false,
+    defaultValue: dataTypes.NOW,
   },
-  calorie_count: {
-
+  daily_goal: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+    autoincrement: true,
   },
-});
+  actul_intake: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+    autoincrement: true,
+  },
+},
+{
+    sequelize,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'water',
+}
+);
 
-module.exports = Food;
+
+
+
+module.exports = water;
