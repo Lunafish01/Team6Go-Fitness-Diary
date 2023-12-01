@@ -3,6 +3,7 @@ const sequelize = require("../config/connection");
 
 class water extends Model {}
 
+
 water.init(
   {
   id: {
@@ -42,5 +43,8 @@ water.init(
     modelName: 'water',
 }
 );
+
+});
+
 
 module.exports = water;
