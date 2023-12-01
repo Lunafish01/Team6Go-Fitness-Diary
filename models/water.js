@@ -20,9 +20,9 @@ water.init(
     },
   },
   date: { 
-    type: DataTypes.date,
+    type: DataTypes.DATE,
     allowNull: false,
-    defaultValue: dataTypes.now,
+    defaultValue: dataTypes.NOW,
   },
   daily_goal: {
     type: DataTypes.INTEGER,
