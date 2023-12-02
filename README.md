@@ -9,7 +9,7 @@
 * [Usage](#usage)
 * [Sources](#sources)
 * [Issues](#issues)
-* [Link to Recordings](#link-to-recordings)
+* [Live Site Application](#live-site-application)
 
 ## User Story
 
@@ -26,7 +26,7 @@ https://sequelize.org/docs/v7/models/data-types/
 ## Live Site Appliction
 
 # License
-Copyright (c) [2023] [Professional-Portfolio]
+Copyright (c) [2023] [Team6Go-Fitness-Diary]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
