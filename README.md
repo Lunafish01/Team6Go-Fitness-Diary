@@ -35,13 +35,13 @@
 ## Usage
 
 ## Sources
-https://sebhastian.com/sequelize-date-format/
+https://sebhastian.com/sequelize-date-format/ <br>
 https://sequelize.org/docs/v7/models/data-types/
 
 ## Issues
 
 ## Live Site Appliction
-[Link to Live Site]
+[Link to Live Site] <br>
 [Screenshot of application]
 
 ## License
