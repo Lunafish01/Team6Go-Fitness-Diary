@@ -26,6 +26,10 @@ Food.init(
         len: [1],
       },
     },
+    serving_amount: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
     calorie_count: {
       type: DataTypes.INTEGER,
       primaryKey: true,

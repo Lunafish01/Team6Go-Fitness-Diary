@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 3001;
 // Set up sessions with cookies
 //remember to use an env variable to store this data
 const sess = {
-  secret: "Super secret secret",
+  secret: process.env.SESSION_SECRET,
   cookie: {
     // Stored in milliseconds
     //setting a maximum age for this session
