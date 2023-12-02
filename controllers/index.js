@@ -11,4 +11,10 @@ router.use('/food', food);
 router.use('/steps', steps);
 router.use('/water', water);
 
+router.use((req, res) => {
+    res.status(404).end();
+    console.log('Route not found')
+});
+console.log('Route setup complete')
+
 module.exports = router;
