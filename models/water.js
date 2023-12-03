@@ -23,7 +23,7 @@ water.init(
   date: { 
     type: DataTypes.DATE,
     allowNull: false,
-    defaultValue: dataTypes.NOW,
+    defaultValue: DataTypes.NOW,
   },
   daily_goal: {
     type: DataTypes.INTEGER,
