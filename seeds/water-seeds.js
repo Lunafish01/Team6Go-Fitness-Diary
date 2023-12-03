@@ -1,4 +1,4 @@
-const { water } = require('../models');
+const { water } = require('../models/water');
 
 const waterData = [
     {

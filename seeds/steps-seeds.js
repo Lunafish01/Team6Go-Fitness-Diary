@@ -1,4 +1,4 @@
-const { steps } = require("../models");
+const { steps } = require("../models/steps");
 
 const stepsData = [
   {
