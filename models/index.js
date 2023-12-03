@@ -1,33 +1,30 @@
-const user = require("./user");
-const food = require("./food");
-const steps = require("./steps");
-const water = require("./water");
+const User = require("./user");
+const Food = require("./food");
+const Steps = require("./steps");
+const Water = require("./water");
 
-user.hasMany(steps, {
-  foreignKey: "user_id",
-  onDelete: "CASCADE",
-});
-
-user.hasMany(food, {
-  foreignKey: "user_id",
-  onDelete: "CASCADE",
-});
-
-user.hasMany(water, {
-  foreignKey: "user_id",
-  onDelete: "CASCADE",
-});
-
-steps.belongsTo(user, {
+User.hasMany(Steps, {
   foreignKey: "user_id",
 });
 
-food.belongsTo(user, {
+User.hasMany(Food, {
   foreignKey: "user_id",
 });
 
-water.belongsTo(user, {
+User.hasMany(Water, {
   foreignKey: "user_id",
 });
 
-module.exports = { steps, food, water, user };
+Steps.belongsTo(User, {
+  foreignKey: "user_id",
+});
+
+Food.belongsTo(User, {
+  foreignKey: "user_id",
+});
+
+Water.belongsTo(User, {
+  foreignKey: "user_id",
+});
+
+module.exports = { Steps, Food, Water, User };
