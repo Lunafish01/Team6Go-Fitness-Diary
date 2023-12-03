@@ -13,7 +13,7 @@ router.get("/", withAuth, async (req, res) => {
         {
           model: user,
           attributes: { exclude: ["password"] },
-          order: [["user_name", "ASC"]],
+          order: [["username", "ASC"]],
         },
       ],
     });
