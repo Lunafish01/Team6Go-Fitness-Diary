@@ -1,4 +1,4 @@
-const { water } = require('../models/water');
+const { Water } = require('../models');
 
 const waterData = [
     {
@@ -21,6 +21,6 @@ const waterData = [
     }
 ]
 
-const seedWater = () => water.bulkCreate(waterData);
+const seedWater = () => Water.bulkCreate(waterData);
 
 module.exports = seedWater;

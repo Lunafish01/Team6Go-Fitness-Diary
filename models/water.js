@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require("sequelize");
-const sequelize = require("../config/connection").default;
+const sequelize = require("../config/connection");
 
-class water extends Model {}
+class Water extends Model {}
 
-water.init(
+Water.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -41,4 +41,4 @@ water.init(
   }
 );
 
-module.exports = water;
+module.exports = Water;
