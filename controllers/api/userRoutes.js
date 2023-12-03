@@ -9,14 +9,14 @@ router.get("/", async (req, res) => {
     });
     console.log("Data retrival successful");
 
-    res.json(bdUserdata);
+    res.json(dbUserdataUserdata);
   } catch (err) {
     console.error("Error", err);
     res.status(500).json(err);
   }
 });
 
-//Get request retriving specific user data by users id
+//GET request retriving specific user data by users id
 router.get("/:id", async (req, res) => {
   try {
     const dbUserdata = await user.findOne({
