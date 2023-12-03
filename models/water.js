@@ -10,7 +10,7 @@ water.init(
     type: DataTypes.INTEGER,
     primaryKey: true,
     allowNull: false,
-    autoincrement: true,
+    autoIncrement: true,
   },
   user_id: {
     type: DataTypes.INTEGER,
@@ -28,12 +28,10 @@ water.init(
   daily_goal: {
     type: DataTypes.INTEGER,
     allowNull: false,
-    autoincrement: true,
   },
   actul_intake: {
     type: DataTypes.INTEGER,
     allowNull: false,
-    autoincrement: true,
   },
 },
 {
