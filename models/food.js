@@ -45,6 +45,6 @@ Food.init(
     underscored: true,
     modelName: "food",
   }
-),
+);
 
- module.exports = Food;
+  module.exports = Food;

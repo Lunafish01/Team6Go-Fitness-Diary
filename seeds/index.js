@@ -5,17 +5,17 @@ const seedWater = require("./water-seeds");
 const seedUser = require("./user-seeds");
 
 const seedAll = async () => {
-    await sequelize.sync({ forces: true });
+  await sequelize.sync({ alter: true });
 
-    await seedUser();
+  await seedUser();
 
-    await seedFood();
+  await seedFood();
 
-    await seedSteps(); 
+  await seedSteps();
 
-    await seedWater(); 
+  await seedWater();
 
-    process.exit(0);
+  process.exit(0);
 };
 
 seedAll();

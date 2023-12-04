@@ -1,4 +1,4 @@
-const { steps } = require("../models/steps");
+const { Steps } = require("../models");
 
 const stepsData = [
   {
@@ -24,6 +24,6 @@ const stepsData = [
   },
 ];
 
-const seedSteps = () => steps.bulkCreate(stepsData);
+const seedSteps = () => Steps.bulkCreate(stepsData);
 
 module.exports = seedSteps;

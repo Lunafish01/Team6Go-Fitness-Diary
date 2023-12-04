@@ -1,25 +1,39 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class water extends Model {}
+class Water extends Model {}
 
-
-water.init(
+Water.init(
   {
-  id: {
-    type: DataTypes.INTEGER,
-    primaryKey: true,
-    allowNull: false,
-    autoIncrement: true,
-  },
-  user_id: {
-    type: DataTypes.INTEGER,
-    allowNull: false,
-    references: {
-      model: "user",
-      key: "id",
+    id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      allowNull: false,
+      autoIncrement: true,
+    },
+    user_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: "user",
+        key: "id",
+      },
+    },
+    date: {
+      type: DataTypes.DATE,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
+    },
+    daily_goal: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    actul_intake: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
     },
   },
+<<<<<<< HEAD
   date: { 
     type: DataTypes.DATE,
     allowNull: false,
@@ -35,14 +49,14 @@ water.init(
   },
 },
 {
+=======
+  {
+>>>>>>> 9da2e248d6ab993fab7dddb00954d3bdce042c09
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'water',
-}
+    modelName: "water",
+  }
 );
 
-
-
-
-module.exports = water;
+module.exports = Water;
