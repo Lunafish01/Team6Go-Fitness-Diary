@@ -1,0 +1,21 @@
+<h2>Your Feed</h2>
+
+<script>
+  {{#each entry}}
+    <div class="post">
+      <div class="user-info">
+        <span>{{user.username}}</span>
+      </div>
+      {{#if posts.length}}
+
+  
+    {{#each posts as |post|}}
+      {{> dashboard-postinfo post}}
+    {{/each}}
+    {{/if}}
+      <div class="actions">
+        <!-- Add like, comment, or other actions here -->
+      </div>
+    </div>
+  {{/each}}
+</script>
