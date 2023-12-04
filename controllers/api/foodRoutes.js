@@ -1,12 +1,13 @@
 const router = require("express").Router();
 const withAuth = require("../../utils/auth");
 const sequelize = require("../../config/connection");
-const { steps, food, water, users } = require("../../models");
+const { steps, food, water, user } = require("../../models");
 
 //GET request to get all food entries
 router.get("/", async (req, res) => {
   try {
     const dbFoodData = await food.findAll({
+      where: { user_id: req.params.id },
       attributes: ["user_id", "food_name", "serving_amount", "calorie_count"],
       order: [["created_at", "DESC"]],
       include: [
