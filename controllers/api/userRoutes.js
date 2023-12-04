@@ -1,15 +1,16 @@
-const router = require("express").Router();
-const { food, steps, user, water } = require("../../models");
+const express = require("express");
+const router = express.Router();
+const { Food, Steps, User, Water } = require("../../models");
 
 //GET request retrieving data about all users
 router.get("/", async (req, res) => {
   try {
-    const dbUserdata = await user.findAll({
+    const dbUserdata = await User.findAll({
       attributes: { exclude: ["password"] },
     });
     console.log("Data retrival successful");
 
-    res.json(dbUserdataUserdata);
+    res.json(dbUserdata);
   } catch (err) {
     console.error("Error", err);
     res.status(500).json(err);
@@ -19,22 +20,22 @@ router.get("/", async (req, res) => {
 //GET request retriving specific user data by users id
 router.get("/:id", async (req, res) => {
   try {
-    const dbUserdata = await user.findOne({
+    const dbUserdata = await User.findOne({
       attributes: { exclude: ["password"] },
       where: {
         id: req.params.id,
       },
       include: [
         {
-          model: food,
+          model: Food,
           attributes: ["id", "food_name", "serving_amount", "calorie_count"],
         },
         {
-          model: water,
+          model: Water,
           attributes: ["id", "date", "dauliy_goal", "actual_intake"],
         },
         {
-          model: steps,
+          model: Steps,
           attributes: [
             "id",
             "step_count",
@@ -42,7 +43,7 @@ router.get("/:id", async (req, res) => {
             "distance_travelled",
           ],
           include: {
-            model: water,
+            model: Water,
             attributes: ["date"],
           },
         },
@@ -63,7 +64,7 @@ router.get("/:id", async (req, res) => {
 router.post("/", async (req, res) => {
   try {
     const { username, email, password } = req.body;
-    const dbUserData = await user.create({
+    const dbUserData = await User.create({
       username,
       email,
       password,
@@ -79,11 +80,10 @@ router.post("/", async (req, res) => {
   }
 });
 
-
 //POST route for handling user login
 router.post("/login", async (req, res) => {
   try {
-    const dbUserData = await user.findOne({
+    const dbUserData = await User.findOne({
       where: {
         email: req.body.email,
       },

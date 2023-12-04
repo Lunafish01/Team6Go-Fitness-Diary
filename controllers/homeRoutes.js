@@ -1,17 +1,17 @@
 const sequelize = require("../config/connection");
 const router = require("express").Router();
-const { steps, food, water, user } = require("../../models");
-const withAuth = require("../../utils/auth");
+const { User } = require("../models");
+const withAuth = require("../utils/auth");
 
 router.get("/", withAuth, async (req, res) => {
   try {
     console.log("Router Working");
     // Get all entry data and JOIN with user data
-    const userData = await user.findAll({
+    const userData = await User.findAll({
       where: { id: req.session.user_id },
       include: [
         {
-          model: user,
+          model: User,
           attributes: { exclude: ["password"] },
           order: [["username", "ASC"]],
         },
@@ -19,7 +19,7 @@ router.get("/", withAuth, async (req, res) => {
     });
 
     // Serialize data so the template can read it
-    const users = userData.map((user) => user.get({ plain: true }));
+    const users = userData.map((user) => User.get({ plain: true }));
     // Pass serialized data and session flag into template
     res.render("dashboard", {
       users,

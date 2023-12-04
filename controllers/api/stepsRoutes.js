@@ -1,14 +1,15 @@
 // import models and routes
-const router = require("express").Router();
-const { steps, user } = require("../../models");
+const express = require('express');
+const router = express.Router();
+const { Steps, User } = require("../../models");
 const withAuth = require("../../utils/auth");
 
 // GET 'api/steps/' find all content and post it on page
 router.get("/", async (req, res) => {
   try {
     console.log("Router Working");
-    const stepsData = await steps.findAll({
-      where: { user_id: req.params.id },
+    const stepsData = await Steps.findAll({
+      where: { id: req.params.id },
       attributes: [
         "id",
         "user_id",
@@ -20,7 +21,7 @@ router.get("/", async (req, res) => {
       order: [["date", "DESC"]],
       include: [
         {
-          model: user,
+          model: User,
           attributes: ["username"],
         },
       ],
@@ -36,7 +37,7 @@ router.get("/", async (req, res) => {
 router.get("/:id", async (req, res) => {
   try {
     console.log("Router Working");
-    const stepsData = await steps.findOne({
+    const stepsData = await Steps.findOne({
       where: {
         id: req.params.id,
       },
@@ -50,7 +51,7 @@ router.get("/:id", async (req, res) => {
       ],
       include: [
         {
-          model: user,
+          model: User,
           attributes: ["username"],
         },
       ],
@@ -72,7 +73,7 @@ router.get("/:id", async (req, res) => {
 router.post("/", withAuth, async (req, res) => {
   try {
     console.log("Router Working");
-    const stepsData = await steps.create({
+    const stepsData = await Steps.create({
       date: req.body.date,
       step_count: req.body.step_count,
       calories_burned: req.body.calories_burned,
