@@ -28,30 +28,12 @@ Water.init(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    actul_intake: {
+    actual_intake: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
   },
-<<<<<<< HEAD
-  date: { 
-    type: DataTypes.DATE,
-    allowNull: false,
-    defaultValue: DataTypes.NOW,
-  },
-  daily_goal: {
-    type: DataTypes.INTEGER,
-    allowNull: false,
-  },
-  actul_intake: {
-    type: DataTypes.INTEGER,
-    allowNull: false,
-  },
-},
-{
-=======
   {
->>>>>>> 9da2e248d6ab993fab7dddb00954d3bdce042c09
     sequelize,
     freezeTableName: true,
     underscored: true,
