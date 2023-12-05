@@ -1,5 +1,4 @@
-const express = require('express');
-const router = express.Router();
+const router = require('express').Router();
 const withAuth = require("../../utils/auth");
 const { Food, User } = require("../../models");
 
@@ -89,3 +88,5 @@ router.post("/", withAuth, async (req, res) => {
     res.status(500).json({ err: "Internal server error" });
   }
 });
+
+module.exports = router;

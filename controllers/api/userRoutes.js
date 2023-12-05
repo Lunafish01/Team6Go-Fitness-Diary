@@ -1,5 +1,4 @@
-const express = require("express");
-const router = express.Router();
+const router = require("express").Router();
 const { Food, Steps, User, Water } = require("../../models");
 
 //GET request retrieving data about all users
@@ -117,3 +116,5 @@ router.post("/login", async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+module.exports = router;
