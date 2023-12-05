@@ -1,7 +1,7 @@
-const User = require("./user");
-const Food = require("./food");
-const Steps = require("./steps");
-const Water = require("./water");
+const User = require("./User");
+const Food = require("./Food");
+const Steps = require("./Steps");
+const Water = require("./Water");
 
 User.hasMany(Steps, {
   foreignKey: "user_id",
