@@ -47,4 +47,3 @@ Food.init(
   }
 );
 
-  module.exports = Food;
