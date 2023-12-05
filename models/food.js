@@ -47,4 +47,4 @@ Food.init(
   }
 );
 
-module.exports = Food;
+  module.exports = Food;
