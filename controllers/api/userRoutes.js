@@ -2,7 +2,7 @@ const router = require("express").Router();
 const { Food, Steps, User, Water } = require("../../models");
 
 //GET request retrieving data about all users
-router.get("/", async (req, res) => {
+router.get("/user", async (req, res) => {
   try {
     const dbUserdata = await User.findAll({
       attributes: { exclude: ["password"] },

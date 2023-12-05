@@ -1,9 +1,9 @@
-const router = require('express').Router();
+const router = require("express").Router();
 const withAuth = require("../../utils/auth");
 const { Food, User } = require("../../models");
 
 //GET request to get all food entries
-router.get("/", async (req, res) => {
+router.get("/food", async (req, res) => {
   try {
     const dbFoodData = await Food.findAll({
       where: { id: req.params.id },
@@ -12,24 +12,15 @@ router.get("/", async (req, res) => {
       include: [
         {
           model: User,
-          attributes: [
-            "user_id",
-            "food_name",
-            "serving_amount",
-            "calorie_count",
-          ],
-          include: {
-            model: User,
-            attributes: ["username"],
-          },
+          attributes: ["user_id", "username"],
         },
       ],
     });
 
     res.json(dbFoodData);
   } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
+    console.error("Error in foodRoutes GET /:", err);
+    res.status(500).json({ error: "Internal server error. Unable to fetch food data." });
   }
 });
 

@@ -4,7 +4,7 @@ const { Water, User } = require("../../models");
 const withAuth = require("../../utils/auth");
 
 // GET 'api/water/' find all content and post it on page
-router.get("/", async (req, res) => {
+router.get("/water", async (req, res) => {
   try {
     console.log("Router Working");
     const waterData = await Water.findAll({
