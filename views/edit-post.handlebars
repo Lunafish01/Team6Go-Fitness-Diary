@@ -1,22 +1,21 @@
-<h2 class="card-header">Edit Post</h2>
-<form class="card-body edit-post-form">
-    <div class="field">
-        <label for="post-title" class="label">Title</label>
-        <div class="control">
-            <input name="post-title" type="text" value="{{post.title}}" class="input" />
-        </div>
+<h2 class="card-header">Edit Food Entry</h2>
+<form class="card-body edit-food-form">
+     <div class="form-row">
+        <label for="meal-name" class="form-label subtitle is-5">Meal Name:</label>
+<input type="text" id="meal-name" name="meal-name" class="form-input form-control" value="{{meal-name}}" />
+    </div>
+     <div class="form-row">
+        <label for="calories" class="form-label subtitle is-5">Calories:</label>
+<input type="text" id="calories" name="calories" class="form-input form-control" value="{{calories}}" />
+    </div>
+     <div class="form-row">
+        <label for="serving-size" class="form-label subtitle is-5">Serving Size:</label>
+<input type="text" id="serving-size" name="serving-size" class="form-input form-control" value="{{serving-size}}" />
     </div>
 
     <div class="field">
-        <label class="label" for="content">Content</label>
         <div class="control">
-            <input name="content" type="text" value="{{post.content}}" class="input" />
-        </div>
-    </div>
-
-    <div class="field">
-        <div class="control">
-            <button type="submit" class="button is-primary">Update Post</button>
+            <button type="submit" class="button is-primary">Update Entry</button>
             <button type="button" class="button is-danger delete-post-btn">Delete Post</button>
         </div>
     </div>
