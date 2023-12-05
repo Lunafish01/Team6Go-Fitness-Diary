@@ -36,7 +36,9 @@
 
 ## Sources
 https://sebhastian.com/sequelize-date-format/ <br>
-https://sequelize.org/docs/v7/models/data-types/
+https://sequelize.org/docs/v7/models/data-types/ <br>
+https://docs.airship.com/guides/messaging/user-guide/personalization/handlebars/basics/ <br>
+https://bulma.io/documentation/overview/start/
 
 ## Issues
 
