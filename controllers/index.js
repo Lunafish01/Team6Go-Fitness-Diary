@@ -1,16 +1,15 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const homeRoutes = require('./homeRoutes');
-const apiRoutes = require('./api');
+const apiRoutes = require("./api");
+const homeRoutes = require("./homeRoutes.js");
 
-router.use('/', homeRoutes);
-router.use('/', apiRoutes);
+router.use("/api", apiRoutes);
+router.use("/", homeRoutes);
 
 router.use((req, res) => {
-    res.status(404).end();
-    console.log('Route not found!')
+  res.status(404).end();
+  console.log("Route not found!");
 });
-console.log('Route setup complete')
+console.log("Route setup complete");
 
 module.exports = router;
-

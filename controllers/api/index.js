@@ -1,9 +1,10 @@
-const express = require('express');
-const router = express.Router();
+const router = require("express").Router();
+const userRoutes = require("./userRoutes");
 const foodRoutes = require("./foodRoutes");
 const stepsRoutes = require("./stepsRoutes");
 const waterRoutes = require("./waterRoutes");
 
+router.use("/User", userRoutes);
 router.use("/Food", foodRoutes);
 router.use("/Steps", stepsRoutes);
 router.use("/Water", waterRoutes);
