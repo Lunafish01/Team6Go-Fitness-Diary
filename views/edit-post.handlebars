@@ -1,17 +1,26 @@
 <h2 class="card-header">Edit Post</h2>
-    <form class="card-body edit-post-form">
-        <div class="form-row">
-        <label for="post-title" class="form-label">Title</label>
-        <input name="post-title" type="text" value="{{post.title}}" class="form-input form-control"/>
+<form class="card-body edit-post-form">
+    <div class="field">
+        <label for="post-title" class="label">Title</label>
+        <div class="control">
+            <input name="post-title" type="text" value="{{post.title}}" class="input" />
         </div>
+    </div>
 
-        <div class="form-row">
-        <label class="form-label" for="content">Content</label>
-        <input name="content" type="text" value="{{post.content}}" class="form-input form-control"/>
+    <div class="field">
+        <label class="label" for="content">Content</label>
+        <div class="control">
+            <input name="content" type="text" value="{{post.content}}" class="input" />
         </div>
-        <button type="submit" class="btn">Update Post</button>
-        <button type="button" class="delete-post-btn btn">Delete Post</button>
-    </form>
+    </div>
+
+    <div class="field">
+        <div class="control">
+            <button type="submit" class="button is-primary">Update Post</button>
+            <button type="button" class="button is-danger delete-post-btn">Delete Post</button>
+        </div>
+    </div>
+</form>
 
 
 

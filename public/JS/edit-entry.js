@@ -12,7 +12,7 @@ async function editFormHandler(event) {
     ];
   
     if (title && content) {
-      const response = await fetch(`/api/foodRoutes/${id}`, {
+      const foodResponse = await fetch(`/api/foodRoutes/${id}`, {
         method: "PUT",
         body: JSON.stringify({
           post_id: id,
@@ -23,13 +23,46 @@ async function editFormHandler(event) {
           "Content-Type": "application/json",
         },
       });
-  // If successful, redirect the browser to the dashboard page
-  if (response.ok) {
-    document.location.replace("/dashboard/");
-  } else {
-    const errorMessage = await response.text();
-    alert(`Error: ${errorMessage}`);
-  }}
-  };
+      // If successful, redirect the browser to the dashboard page
+      if (foodResponse.ok) {
+        document.location.replace("/dashboard/");
+      } else {
+        const foodErrorMessage = await foodResponse.text();
+        alert(`Error editing post: ${foodErrorMessage}`);
+      }
+    }
   
-  document.querySelector(".edit-post-form").addEventListener("submit", editFormHandler);
+    // Additional API routes
+    const stepsResponse = await fetch(`/api/stepsRoutes/${id}`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+  
+    if (stepsResponse.ok) {
+      // Handle the response for the second route
+    } else {
+      const stepsErrorMessage = await stepsResponse.text();
+      alert(`Error in steps route: ${stepsErrorMessage}`);
+    }
+  
+    const waterResponse = await fetch(`/api/waterRoutes/${id}`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+  
+    if (waterResponse.ok) {
+      // Handle the response for the third route
+    } else {
+      const waterErrorMessage = await waterResponse.text();
+      alert(`Error in water route: ${waterErrorMessage}`);
+    }
+  }
+  
+  document
+    .querySelector(".edit-post-form")
+    .addEventListener("submit", editFormHandler);
+  
