@@ -1,7 +1,7 @@
 async function newEntryHandler(event) {
     event.preventDefault();
   
-    const title = document.querySelector('input[name="post-title"]').value;
+    const date = document.querySelector('input[name="date"]').value;
     const steps = document.querySelector('input[name="step-count"]').value;
     const calories = document.querySelector('input[name="calories-burned"]').value;
     const distance = document.querySelector('input[name="distance-travelled"]').value;
@@ -9,7 +9,7 @@ async function newEntryHandler(event) {
     const response = await fetch(`/api/stepsRoutes`, {
       method: "POST",
       body: JSON.stringify({
-        title,
+        date,
         steps,
         calories,
         distance

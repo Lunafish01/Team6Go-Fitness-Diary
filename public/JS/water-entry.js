@@ -1,14 +1,14 @@
 async function newEntryHandler(event) {
     event.preventDefault();
   
-    const title = document.querySelector('input[name="post-title"]').value;
+    const date = document.querySelector('input[name="date"]').value;
     const goal = document.querySelector('input[name="daily-goal"]').value;
     const intake = document.querySelector('input[name="actual-intake"]').value;
 
     const response = await fetch(`/api/waterRoutes`, {
       method: "POST",
       body: JSON.stringify({
-        title,
+        date,
         goal,
         intake
         
