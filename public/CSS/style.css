@@ -1,0 +1,14 @@
+/* Background color of body on water HTML */
+body {
+    background-color: white;
+  }
+  
+  /* Hero on water html */
+  .hero {
+    height: 600px;
+    width: 100%;
+    border-radius: 20px 20px 20px 20px;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: cover
+}
