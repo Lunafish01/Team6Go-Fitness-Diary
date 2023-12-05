@@ -12,3 +12,81 @@ body {
     background-position: right;
     background-size: cover
 }
+
+/* Hero on main html */
+.hero1 {
+    height: 350px;
+    width: 100%;
+    border-radius: 20px 20px 20px 20px;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: cover
+  }
+  
+  /* Hero on main2 html */
+  .hero2 {
+    height: 500px;
+    width: 1200px;
+    border-radius: 20px 20px 20px 20px;
+    background-repeat: no-repeat;
+    background-size:cover;
+    margin: 1% 10% 2% 18%;
+    text-align: center;
+  }
+
+  /* navigation on main html */
+.tabs {
+    color: rgb(10, 108, 221); 
+    font-size: 25px;
+    letter-spacing: 2px;
+    padding: 0px 10px;
+    line-height: 1;
+    text-align: center;
+    position: center;
+  }
+  
+    /* Main Title at the top of water HTML */
+    #HeroTitle { 
+      color: rgb(52, 132, 217);
+      position: left;
+      text-align: left;
+      font-size: 40px;
+      letter-spacing: 6px;
+      padding: 100px 50px;
+      line-height: 1.5;
+    }
+  
+    
+    /* Main Title at the top of hero title 1 HTML */
+    #HeroTitle1 { 
+      position:right;
+      text-align: right;
+      font-size: 40px;
+      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      letter-spacing: 50px;
+      padding: 400px 80px;
+      line-height: 1.5;
+      font-style: italic;
+    }
+  
+      /* Title at the top on food HTML hero */
+      #HeroTitle2 { 
+        color: rgb(5, 47, 15);
+        position: left;
+        text-align: left;
+        font-size: 40px;
+        letter-spacing: 6px;
+        padding: 175px 450px;
+        line-height: 1.5;
+      }
+  
+       /* Title at the top on steps HTML hero */
+       #HeroTitle3 { 
+        color: rgb(19, 104, 25);
+        position: left;
+        text-align: left;
+        font-size: 40px;
+        letter-spacing: 6px;
+        padding: 170px 200px;
+        line-height: 1.5;
+      }
