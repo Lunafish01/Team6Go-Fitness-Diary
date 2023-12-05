@@ -24,10 +24,6 @@ router.get("/", async (req, res) => {
             attributes: ["username"],
           },
         },
-        {
-          model: User,
-          attributes: ["username"],
-        },
       ],
     });
 
