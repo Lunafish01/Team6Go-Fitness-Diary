@@ -12,25 +12,3 @@ body {
     background-position: right;
     background-size: cover
 }
-
-/* Hero on main html */
-.hero1 {
-  height: 350px;
-  width: 100%;
-  border-radius: 20px 20px 20px 20px;
-  background-repeat: no-repeat;
-  background-position: right;
-  background-size: cover
-}
-
-
-/* Hero on main2 html */
-.hero2 {
-  height: 500px;
-  width: 1200px;
-  border-radius: 20px 20px 20px 20px;
-  background-repeat: no-repeat;
-  background-size:cover;
-  margin: 1% 10% 2% 18%;
-  text-align: center;
-}
