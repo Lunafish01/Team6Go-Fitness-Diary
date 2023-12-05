@@ -1,27 +1,26 @@
-<h2 class="title is-4 container is-fluid ">Create New Steps Entry</h2>
-    <form class="field container is-fluid" id="new-steps-entry">
-        <div class="form-row">
-            <label for="post-title" class="form-label subtitle is-5">Date: </label>
-            <input type="content" id="post-title" name="post-title" class="form-input form-control" />
-        </div>
-        <div class="form-row">
-            <label class="form-label subtitle is-5 " for="content">Step Count: </label>
-            <input id="content" name="content" class="form-input form-control " />
-        </div>  
-         <div class="form-row">
-            <label class="form-label subtitle is-5" for="content">Calories Burned:</label>
-            <input id="content" name="content" class="form-input form-control" />
-        </div>  
-         <div class="form-row">
-            <label class="form-label subtitle is-5" for="content">Distance Travelled:</label>
-            <input id="content" name="content" class="form-input form-control" />
-        </div>  
-        <div class="field">
-          <p class="control">
-            <button class="button is-success">
-              Post
-            </button>
-    </form>
+<h2 class="title is-4 container is-fluid">Create New Steps Entry</h2>
+<form class="field container is-fluid" id="new-steps-entry">
+    <div class="form-row">
+        <label for="post-title" class="form-label subtitle is-5">Date:</label>
+        <input type="date" id="post-title" name="post-title" class="form-input form-control" />
+    </div>
+    <div class="form-row">
+        <label class="form-label subtitle is-5" for="step-count">Step Count:</label>
+        <input id="step-count" name="step-count" class="form-input form-control" />
+    </div>
+    <div class="form-row">
+        <label class="form-label subtitle is-5" for="calories-burned">Calories Burned:</label>
+        <input id="calories-burned" name="calories-burned" class="form-input form-control" />
+    </div>
+    <div class="form-row">
+        <label class="form-label subtitle is-5" for="distance-travelled">Distance Travelled:</label>
+        <input id="distance-travelled" name="distance-travelled" class="form-input form-control" />
+    </div>
+    <div class="field">
+        <p class="control">
+            <button type="submit" class="button is-success">Post</button>
+        </p>
+    </div>
+</form>
 
-
-<script src="/js/add-entry.js"></script>
+<script src="/js/steps-entry.js"></script>
