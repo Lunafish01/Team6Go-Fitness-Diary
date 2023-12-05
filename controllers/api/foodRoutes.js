@@ -11,7 +11,7 @@ router.get("/", async (req, res) => {
       order: [["created_at", "DESC"]],
       include: [
         {
-          model: Food,
+          model: User,
           attributes: [
             "user_id",
             "food_name",
