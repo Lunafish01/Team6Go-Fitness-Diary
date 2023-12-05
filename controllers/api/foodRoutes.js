@@ -1,18 +1,18 @@
-const router = require("express").Router();
+const express = require('express');
+const router = express.Router();
 const withAuth = require("../../utils/auth");
-const sequelize = require("../../config/connection");
-const { steps, food, water, user } = require("../../models");
+const { Food, User } = require("../../models");
 
 //GET request to get all food entries
 router.get("/", async (req, res) => {
   try {
-    const dbFoodData = await food.findAll({
-      where: { user_id: req.params.id },
+    const dbFoodData = await Food.findAll({
+      where: { id: req.params.id },
       attributes: ["user_id", "food_name", "serving_amount", "calorie_count"],
       order: [["created_at", "DESC"]],
       include: [
         {
-          model: food,
+          model: Food,
           attributes: [
             "user_id",
             "food_name",
@@ -20,12 +20,12 @@ router.get("/", async (req, res) => {
             "calorie_count",
           ],
           include: {
-            model: user,
+            model: User,
             attributes: ["username"],
           },
         },
         {
-          model: user,
+          model: User,
           attributes: ["username"],
         },
       ],
@@ -41,18 +41,18 @@ router.get("/", async (req, res) => {
 //GET request to get food entry by id
 router.get("/:id", async (req, res) => {
   try {
-    const dbFoodData = await food.findOne({
+    const dbFoodData = await Food.findOne({
       where: {
         id: req.params.id,
       },
       attributes: ["user_id", "food_name", "serving_amount", "calorie_count"],
       include: [
         {
-          model: user,
+          model: User,
           attributes: ["username"],
         },
         {
-          model: food,
+          model: Food,
           attributes: [
             "user_id",
             "food_name",
@@ -60,7 +60,7 @@ router.get("/:id", async (req, res) => {
             "calorie_count",
           ],
           include: {
-            model: user,
+            model: User,
             attributes: ["username"],
           },
         },
@@ -81,7 +81,7 @@ router.get("/:id", async (req, res) => {
 //POST request to create a new food entry
 router.post("/", withAuth, async (req, res) => {
   try {
-    const dbFoodData = await food.create({
+    const dbFoodData = await Food.create({
       food_name: req.body.food_name,
       serving_amount: req.body.serving_amount,
       calorie_count: req.body.calorie_count,

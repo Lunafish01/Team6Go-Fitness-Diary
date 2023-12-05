@@ -1,14 +1,15 @@
 // import models and routes
-const router = require("express").Router();
-const { steps, food, water, user } = require("../../models");
+const express = require("express");
+const router = express.Router();
+const { Water, User } = require("../../models");
 const withAuth = require("../../utils/auth");
 
 // GET 'api/water/' find all content and post it on page
 router.get("/", async (req, res) => {
   try {
     console.log("Router Working");
-    const waterData = await water.findAll({
-      where: { user_id: req.params.id },
+    const waterData = await Water.findAll({
+      where: { id: req.params.id },
         attributes: [
         "id",
         "user_id",
@@ -19,7 +20,7 @@ router.get("/", async (req, res) => {
       order: [["date", "DESC"]],
       include: [
         {
-          model: user,
+          model: User,
           attributes: ["user_name"],
         },
       ],
@@ -35,7 +36,7 @@ router.get("/", async (req, res) => {
 router.get("/:id", async (req, res) => {
     try {
         console.log("Router Working");
-      const waterData = await water.findOne({
+      const waterData = await Water.findOne({
         where: {
           id: req.params.id,
         },
@@ -48,7 +49,7 @@ router.get("/:id", async (req, res) => {
         ],
         include: [
           {
-            model: user,
+            model: User,
             attributes: ["user_name"],
           },
         ],
@@ -70,7 +71,7 @@ router.get("/:id", async (req, res) => {
 router.post("/", withAuth, async (req, res) => {
     try {
         console.log("Router Working");
-      const waterData = await water.create({
+      const waterData = await Water.create({
         date: req.body.date,
         daily_goal: req.body.daily_goal,
         actual_intake: req.body.actual_intake,
