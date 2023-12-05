@@ -24,4 +24,4 @@ async function newEntryHandler(event) {
   }
 }
 
-document.querySelector(".new-food-entry").addEventListener("submit", newEntryHandler);
+document.querySelector("#new-food-entry").addEventListener("submit", newEntryHandler);

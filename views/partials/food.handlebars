@@ -1,23 +1,24 @@
-<h2 class="title is-4 container is-fluid ">Add your food for the day</h2>
-    <form class="field container is-fluid" id="new-food-entry">
-        <div class="form-row">
-            <label for="post-title" class="form-label subtitle is-5">Meal Name: </label>
-            <input type="content" id="post-title" name="post-title" class="form-input form-control" />
-        </div>
-        <div class="form-row">
-            <label class="form-label subtitle is-5 " for="content">Enter Calories: </label>
-            <input id="content" name="content" class="form-input form-control " />
-        </div>  
-         <div class="form-row">
-            <label class="form-label subtitle is-5" for="content">Serving Size:</label>
-            <input id="content" name="content" class="form-input form-control" />
-        </div>  
-        <div class="field">
-          <p class="control">
-            <button class="button is-success">
-              Post
+<h2 class="title is-4 container is-fluid">Add your food for the day</h2>
+<form class="field container is-fluid" id="new-food-entry">
+    <div class="form-row">
+        <label for="meal-name" class="form-label subtitle is-5">Meal Name:</label>
+        <input type="text" id="meal-name" name="post-title" class="form-input form-control" />
+    </div>
+    <div class="form-row">
+        <label class="form-label subtitle is-5" for="calories">Enter Calories:</label>
+        <input id="calories" name="calories" class="form-input form-control" />
+    </div>
+    <div class="form-row">
+        <label class="form-label subtitle is-5" for="serving-size">Serving Size:</label>
+        <input id="serving-size" name="serving-size" class="form-input form-control" />
+    </div>
+    <div class="field">
+        <p class="control">
+            <button type="submit" class="button is-success">
+                Post
             </button>
-    </form>
-
+        </p>
+    </div>
+</form>
 
 <script src="/js/food-entry.js"></script>

@@ -1,23 +1,22 @@
-<h2 class="title is-4 container is-fluid ">Add New Water Entry</h2>
-    <form class="field container is-fluid" id="new-water-entry">
-        <div class="form-row">
-            <label for="post-title" class="form-label subtitle is-5">Date: </label>
-            <input type="content" id="post-title" name="post-title" class="form-input form-control" />
-        </div>
-        <div class="form-row">
-            <label class="form-label subtitle is-5 " for="content">daily_goal: </label>
-            <input id="content" name="content" class="form-input form-control " />
-        </div>  
-         <div class="form-row">
-            <label class="form-label subtitle is-5" for="content">actual_intake:</label>
-            <input id="content" name="content" class="form-input form-control" />
-        </div>  
-        <div class="field">
-          <p class="control">
-            <button class="button is-success">
-              Post
-            </button>
-    </form>
+<h2 class="title is-4 container is-fluid">Add New Water Entry</h2>
+<form class="field container is-fluid" id="new-water-entry">
+    <div class="form-row">
+        <label for="date" class="form-label subtitle is-5">Date:</label>
+        <input type="date" id="date" name="date" class="form-input form-control" />
+    </div>
+    <div class="form-row">
+        <label class="form-label subtitle is-5" for="daily-goal">Daily Goal:</label>
+        <input id="daily-goal" name="daily-goal" class="form-input form-control" />
+    </div>
+    <div class="form-row">
+        <label class="form-label subtitle is-5" for="actual-intake">Actual Intake:</label>
+        <input id="actual-intake" name="actual-intake" class="form-input form-control" />
+    </div>
+    <div class="field">
+        <p class="control">
+            <button type="submit" class="button is-success">Post</button>
+        </p>
+    </div>
+</form>
 
-
-<script src="/js/add-entry.js"></script>
+<script src="/js/water-entry.js"></script>
