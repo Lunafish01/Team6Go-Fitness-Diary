@@ -2,17 +2,16 @@ const router = require("express").Router();
 const withAuth = require("../../utils/auth");
 const { Food, User } = require("../../models");
 
-//GET request to get all food entries
-router.get("/food", async (req, res) => {
+//GET 'api/food' request to get all food entries
+router.get("/", async (req, res) => {
   try {
     const dbFoodData = await Food.findAll({
-      where: { id: req.params.id },
       attributes: ["user_id", "food_name", "serving_amount", "calorie_count"],
       order: [["created_at", "DESC"]],
       include: [
         {
           model: User,
-          attributes: ["user_id", "username"],
+          attributes: ["username"],
         },
       ],
     });
@@ -36,19 +35,6 @@ router.get("/:id", async (req, res) => {
         {
           model: User,
           attributes: ["username"],
-        },
-        {
-          model: Food,
-          attributes: [
-            "user_id",
-            "food_name",
-            "serving_amount",
-            "calorie_count",
-          ],
-          include: {
-            model: User,
-            attributes: ["username"],
-          },
         },
       ],
     });
