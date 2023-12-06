@@ -47,7 +47,7 @@ body {
   
     /* Main Title at the top of water HTML */
     #HeroTitle { 
-      color: rgb(52, 132, 217);
+      color: black;
       position: left;
       text-align: left;
       font-size: 40px;
@@ -71,12 +71,12 @@ body {
   
       /* Title at the top on food HTML hero */
       #HeroTitle2 { 
-        color: rgb(5, 47, 15);
+        color: silver;
         position: left;
         text-align: left;
-        font-size: 40px;
+        font-size: 100px;
         letter-spacing: 6px;
-        padding: 175px 450px;
+        padding: 50px 1390px;
         line-height: 1.5;
       }
   
@@ -90,3 +90,212 @@ body {
         padding: 170px 200px;
         line-height: 1.5;
       }
+
+      /* "intake" in title of water html */
+  .intake {
+    color: rgb(8, 8, 8)
+  }
+
+  .your {
+    color: silver;
+    padding: 30px;
+  }
+
+  .meals {
+    color: silver;
+    padding: 30px;
+  }
+
+li {
+    color: rgb(52, 217, 58);
+    position: center;
+    text-align: center;
+    font-size: 40px;
+    letter-spacing: 6px;
+    padding: 10px 0px;
+    line-height: 1.5;
+  }
+
+
+/* Title on the main html */
+  .title {
+    color: rgb(52, 132, 217);
+    position: center;
+    text-align: center;
+    font-size: 40px;
+    letter-spacing: 6px;
+    padding: 10px 0px;
+    line-height: 1.5;
+}
+/* subtitle on the water.html "add water intake" */
+  .title2 {
+    color: rgb(30, 81, 133);
+}
+
+/* subtitle on the water.html "add water intake" */
+.is-4 {
+  color: rgb(19, 104, 25);
+}
+
+.container1 {
+  color: rgb(52, 132, 217)
+}
+
+/* date, daily goal, actual intake on water html */
+  #new-entry-form {
+    color: rgb(52, 132, 217);
+    font-size: 30px;
+    border-radius: 20px 20px 20px 20px;
+    padding: 0px 0px 50px 20px;
+}
+  
+/* food name, serving amount, and calorie count on food html */
+#new-entry-form2 {
+  color: rgb(19, 104, 25);
+  font-size: 30px;
+  border-radius: 20px 20px 20px 20px;
+  padding: 0px 0px 50px 20px;
+}
+
+/* date, Step count, and calories burned, and distance travelled on steps html */
+#new-entry-form3 {
+  color: rgb(19, 104, 25);
+  font-size: 30px;
+  border-radius: 20px 20px 20px 20px;
+  padding: 0px 0px 50px 20px;
+}
+
+/* date entry form on water html */
+#post-title {
+  height: 40px;
+  width: 50%;
+  border: none;
+}
+
+/* daily goal and actual intake entry form on water html */
+#content {
+  height: 40px;
+  width: 50%;
+  border: none;
+}
+ /* Button on water html */
+.button {
+  color: blue;
+  background-color: rgb(0, 149, 255);
+  border-radius: 1px 300px 300px 300px;
+  padding: 15px 5px;
+  text-align: center;
+  text-decoration:none;
+  font-size: 16px;
+  display: inline-block;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  margin-left: 10px;
+  border: none;
+}
+
+ /* Button on food html*/
+ .button2 {
+  color: rgb(144, 218, 152);
+  background-color: rgb(6, 57, 11);
+  border-radius: 20px 20px 20px 20px;
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration:none;
+  font-size: 16px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  margin-left: 10px;
+}
+/*
+ .control2 {
+  color:rgb(11, 80, 27);
+  border-radius: 20px;
+  padding: 15px 5px;
+  text-align: center;
+  text-decoration:none;
+  font-size: 16px;
+  margin-left: 10px;
+  text-align: center;
+}*/
+
+
+/* Button on steps html*/
+.button3 {
+  color: rgb(12, 12, 12);
+  background-color: rgb(246, 190, 6);
+  border-radius: 20px 20px 20px 20px;
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration:none;
+  font-size: 16px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  margin-left: 10px;
+  border: none
+}
+
+
+/* Centered button on water html */
+.control {
+  text-align: center;
+}
+
+/* Footer on water html*/
+.footer {
+    color: rgb(10, 126, 221); 
+    /*background-color: black;*/
+    height: 25px;
+    text-align: center;
+    padding: 10px
+  }
+
+  /* footer on food html */
+  .footer {
+    color: rgb(10, 91, 22);
+    text-align: center;
+    padding: 10px
+  }
+
+   /* TEAMNAME at the bottom of water HTML */
+#TEAMNAME {
+    color: black; 
+    font-size: 25px;
+    letter-spacing: 2px;
+    padding: 0px 10px;
+    line-height: 1;
+    text-align: center;
+    position: center;
+    }
+  
+    
+   /* TEAMNAME at the bottom of water HTML */
+#TEAMNAME2 {
+  color: rgb(19, 104, 25); 
+  font-size: 25px;
+  letter-spacing: 2px;
+  padding: 0px 10px;
+  line-height: 1;
+  text-align: center;
+  position: center;
+  }
+
+  #TEAMNAME3 {
+    color: black;
+    font-size: 25px;
+    letter-spacing: 2px;
+    padding: 0px 10px;
+    line-height: 1;
+    text-align: center;
+    position: center;
+    }
+  
+    /* Our names at the bottom of water HTML */
+    a {
+      text-align: center;
+      position: center;
+      font-size: 20px;
+      padding: 0px 10px;
+      color: rgb(32, 66, 99);
+      text-decoration:none;
+      }
+  
+    /*hover over names at bottom of water html*/
+    a:hover { color: rgb(181, 52, 217); }
