@@ -19,11 +19,10 @@ router.get("/user", async (req, res) => {
 //GET request retriving specific user data by users id
 router.get("/:id", async (req, res) => {
   try {
-    const dbUserdata = await User.findOne({
+    const userId = req.params.id;
+
+    const dbUserdata = await User.findByPk(userId, {
       attributes: { exclude: ["password"] },
-      where: {
-        id: req.params.id,
-      },
       include: [
         {
           model: Food,
@@ -31,7 +30,7 @@ router.get("/:id", async (req, res) => {
         },
         {
           model: Water,
-          attributes: ["id", "date", "dauliy_goal", "actual_intake"],
+          attributes: ["id", "date", "daily_goal", "actual_intake"],
         },
         {
           model: Steps,
@@ -41,13 +40,14 @@ router.get("/:id", async (req, res) => {
             "calories_burned",
             "distance_travelled",
           ],
-          include: {
-            model: Water,
-            attributes: ["date"],
-          },
+          // include: {
+          //   model: Water,
+          //   attributes: ["date"],
+          // },
         },
       ],
     });
+
     if (!dbUserdata) {
       res.status(404).json({ message: "User not found!" });
       return;
@@ -55,7 +55,7 @@ router.get("/:id", async (req, res) => {
     res.json(dbUserdata);
   } catch (err) {
     console.log(err);
-    res.status(500).json(err);
+    res.status(500).json({ error: 'Internal Sever Error' });
   }
 });
 

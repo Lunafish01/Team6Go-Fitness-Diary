@@ -34,7 +34,7 @@ router.get("/water", async (req, res) => {
 // GET by id return data when user click specific water entry id
 router.get("/:id", async (req, res) => {
     try {
-        console.log("Router Working");
+      console.log("Router Working");
       const waterData = await Water.findOne({
         where: {
           id: req.params.id,
@@ -49,7 +49,7 @@ router.get("/:id", async (req, res) => {
         include: [
           {
             model: User,
-            attributes: ["user_name"],
+            attributes: ["username"],
           },
         ],
       });

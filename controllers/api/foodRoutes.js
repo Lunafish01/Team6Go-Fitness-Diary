@@ -2,7 +2,7 @@ const router = require("express").Router();
 const withAuth = require("../../utils/auth");
 const { Food, User } = require("../../models");
 
-//GET request to get all food entries
+//GET 'api/food' request to get all food entries
 router.get("/food", async (req, res) => {
   try {
     const dbFoodData = await Food.findAll({
@@ -36,19 +36,6 @@ router.get("/:id", async (req, res) => {
         {
           model: User,
           attributes: ["username"],
-        },
-        {
-          model: Food,
-          attributes: [
-            "user_id",
-            "food_name",
-            "serving_amount",
-            "calorie_count",
-          ],
-          include: {
-            model: User,
-            attributes: ["username"],
-          },
         },
       ],
     });
