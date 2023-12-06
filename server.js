@@ -37,10 +37,8 @@ app.use(express.static(path.join(__dirname, "public")));
 // Handlebars setup
 app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
-// app.get('/', (req, res) => {
-//   res.render('login')
-// });
 
+ 
 // Routes
 app.use(routes);
 

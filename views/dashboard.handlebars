@@ -1,21 +1,33 @@
-<h2>Your Feed</h2>
+<section>
+{{#if loggedIn}}
+    {{!-- Display steps --}}
+    <h2>Steps Taken</h2>
+    <ul>
+      {{#each steps}}
+        <li>Date: {{date}}, Steps: {{step_count}}, Calories Burned: {{calories_burned}}, Distance: {{distance_travelled}}</li>
+      {{/each}}
+    </ul>
 
-<script>
-  {{#each entry}}
-    <div class="post">
-      <div class="user-info">
-        <span>{{user.username}}</span>
-      </div>
-      {{#if posts.length}}
+    {{!-- Display water entries --}}
+    <h2>Water Consumption</h2>
+    <ul>
+      {{#each water}}
+        <li>Date: {{date}}, Daily Goal: {{daily_goal}}, Water Consumed: {{actual_intake}}</li>
+      {{/each}}
+    </ul>
 
-  
-    {{#each posts as |post|}}
-      {{> dashboard-postinfo post}}
-    {{/each}}
-    {{/if}}
-      <div class="actions">
-        <!-- Add like, comment, or other actions here -->
-      </div>
-    </div>
-  {{/each}}
-</script>
+    {{!-- Display food entries --}}
+    <h2>Food Consumption</h2>
+    <ul>
+      {{#each food}}
+        <li>Food: {{food_name}}, Serving Size: {{serving_amount}}, Calories: {{calorie_count}}</li>
+      {{/each}}
+    </ul>
+  {{else}}
+    <p>You are not logged in.</p>
+  {{/if}}
+
+</section>
+
+<script src="/public/JS/logout.js"></script>
+<script src="/public/JS/login.js"></script> 
