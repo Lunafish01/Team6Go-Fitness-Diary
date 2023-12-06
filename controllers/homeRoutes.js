@@ -8,7 +8,7 @@ router.get("/dashboard", withAuth, async (req, res) => {
   try {
     // Fetch data for steps, water, and food
     const stepsPromise = Steps.findAll({
-      where: { userId: req.session.userId },
+      where: { user_id: req.session.user_id },
       attributes: [
         "id",
         "date",
@@ -19,12 +19,12 @@ router.get("/dashboard", withAuth, async (req, res) => {
     });
 
     const waterPromise = Water.findAll({
-      where: { userId: req.session.userId },
+      where: { user_id: req.session.user_id },
       attributes: ["id", "date", "daily_goal", "actual_intake"],
     });
 
     const foodPromise = Food.findAll({
-      where: { userId: req.session.userId },
+      where: { user_id: req.session.user_id },
       attributes: ["id", "food_name", "serving_amount", "calorie_count"],
     });
 
@@ -40,6 +40,10 @@ router.get("/dashboard", withAuth, async (req, res) => {
       waterEntry.get({ plain: true })
     );
     const food = foodData.map((foodEntry) => foodEntry.get({ plain: true }));
+
+    console.log("Steps data:", steps);
+    console.log("Water data:", water);
+    console.log("Food data:", food);
 
     // Render the dashboard view with the combined data
     res.render("dashboard", {
