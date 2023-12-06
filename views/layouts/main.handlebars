@@ -12,19 +12,23 @@
 <body>
   <header>
       <h1 class="title ">
-        {{header}}
+        Fitness Diary
       </h1>
       <nav class="tabs is-centered">
         <ul>
-          <li class="is-active"><a href="/">Home</a></li>
-          <li><a href="/about">Login</a></li>
-          <li><a href="/contact">Logout</a></li>
+          <li class="is-active"><a href="/dashboard">Home</a></li>
+          <li><a href="/user">Profile</a></li>
+          <li><a href="/">Logout</a></li>
         </ul>
       </nav>
     </header>
+    <main class="container container-fluid mt-5">
+      <!-- Render the sub layout -->
+      {{{ body }}}
+    </main>
   </body>
   
-<script src="/js/add-entry.js"></script>
+<script src="/js/login.js"></script>
 
     <footer>{{footer}}</footer>
 
