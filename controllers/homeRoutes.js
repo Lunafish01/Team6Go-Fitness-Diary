@@ -92,9 +92,8 @@ router.get("/login", (req, res) => {
   res.render("login");
 });
 
-// GET signup route direct user to signup page
-// router.get("/login", (req, res) => {
-//   res.render("login");
-// });
+router.get("/login", (req, res) => {
+  res.render("login");
+});
 
 module.exports = router;

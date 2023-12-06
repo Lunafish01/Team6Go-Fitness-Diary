@@ -4,11 +4,10 @@ const { Steps, User } = require("../../models");
 const withAuth = require("../../utils/auth");
 
 // GET 'api/steps/' find all content and post it on page
-router.get("/steps", async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     console.log("Router Working");
     const stepsData = await Steps.findAll({
-      where: { id: req.params.id },
       attributes: [
         "id",
         "user_id",
@@ -21,14 +20,14 @@ router.get("/steps", async (req, res) => {
       include: [
         {
           model: User,
-          attributes: ["username"],
+          attributes: ["id", "username"],
         },
       ],
     });
     res.status(200).json(stepsData);
   } catch (err) {
     console.log(err);
-    res.status(500).json(err);
+    res.status(500).json({ error: "Internal Server Error" });
   }
 });
 

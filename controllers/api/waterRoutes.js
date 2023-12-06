@@ -4,11 +4,10 @@ const { Water, User } = require("../../models");
 const withAuth = require("../../utils/auth");
 
 // GET 'api/water/' find all content and post it on page
-router.get("/water", async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     console.log("Router Working");
     const waterData = await Water.findAll({
-      where: { id: req.params.id },
         attributes: [
         "id",
         "user_id",
@@ -20,7 +19,7 @@ router.get("/water", async (req, res) => {
       include: [
         {
           model: User,
-          attributes: ["user_name"],
+          attributes: ["username"],
         },
       ],
     });
@@ -34,7 +33,7 @@ router.get("/water", async (req, res) => {
 // GET by id return data when user click specific water entry id
 router.get("/:id", async (req, res) => {
     try {
-        console.log("Router Working");
+      console.log("Router Working");
       const waterData = await Water.findOne({
         where: {
           id: req.params.id,
@@ -49,7 +48,7 @@ router.get("/:id", async (req, res) => {
         include: [
           {
             model: User,
-            attributes: ["user_name"],
+            attributes: ["username"],
           },
         ],
       });
