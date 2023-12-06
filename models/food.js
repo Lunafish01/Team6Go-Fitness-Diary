@@ -32,7 +32,6 @@ Food.init(
     },
     calorie_count: {
       type: DataTypes.INTEGER,
-      primaryKey: true,
       allowNull: false,
       validate: {
         len: [1],

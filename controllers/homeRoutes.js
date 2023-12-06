@@ -21,7 +21,7 @@ router.get("/", withAuth, async (req, res) => {
     // Serialize data so the template can read it
     const users = userData.map((user) => User.get({ plain: true }));
     // Pass serialized data and session flag into template
-    res.render("dashboard", {
+    res.render("/main", {
       users,
       logged_in: req.session.logged_in,
     });
@@ -34,7 +34,7 @@ router.get("/", withAuth, async (req, res) => {
 router.get("/login", (req, res) => {
   if (req.session.logged_in) {
     // If the user is already logged in, redirect the request to another route
-    res.redirect("/dashboard");
+    res.redirect("/");
     return;
   }
 
@@ -42,9 +42,9 @@ router.get("/login", (req, res) => {
 });
 
 // GET signup route direct user to signup page
-router.get("/signup", (req, res) => {
-  res.render("signup");
-});
+// router.get("/login", (req, res) => {
+//   res.render("login");
+// });
 
 
 module.exports = router;
