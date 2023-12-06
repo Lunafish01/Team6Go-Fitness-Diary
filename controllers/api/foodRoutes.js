@@ -51,7 +51,7 @@ router.get("/:id", async (req, res) => {
 });
 
 //POST request to create a new food entry
-router.post("/", withAuth, async (req, res) => {
+router.post("/", withAuth, async (req, res) => { //does this need to be at the root route 
   try {
     const dbFoodData = await Food.create({
       food_name: req.body.food_name,
@@ -63,6 +63,58 @@ router.post("/", withAuth, async (req, res) => {
   } catch (err) {
     console.log(err);
     res.status(500).json({ err: "Internal server error" });
+  }
+});
+
+//PUT route to edit user by id
+router.put("/:id", withAuth, async (req, res) => {
+  try {
+    const [affectedRows] = await Food.update(
+      {
+        food_name: req.body.food_name,
+        serving_amount: req.body.serving_amount,
+        calorie_count: req.body.calorie_count,
+      },
+      {
+        where: {
+          id: req.params.id,
+          user_id: req.session.user_id,
+        },
+      }
+    );
+
+    if (affectedRows === 0) {
+      res.status(404).json({ message: "No food entry found with this id" });
+      return;
+    }
+
+    res.json({ message: "Food entry updated successfully" });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+});
+
+
+//Delete route to delete user by id
+router.delete("/:id", withAuth, async (req, res) => {
+  try {
+    const deletedRows = await Food.destroy({
+      where: {
+        id: req.params.id,
+        user_id: req.session.user_id,
+      },
+    });
+
+    if (deletedRows === 0) {
+      res.status(404).json({ message: "No food entry found with this id" });
+      return;
+    }
+
+    res.json({ message: "Food entry deleted successfully" });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Internal Server Error" });
   }
 });
 
