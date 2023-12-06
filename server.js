@@ -35,7 +35,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 
 // Handlebars setup
-app.engine("handlebars", hbs.engine);
+app.engine("handlebars", exphbs({ helpers }));
 app.set("view engine", "handlebars");
 
 // Routes
