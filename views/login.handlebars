@@ -3,9 +3,9 @@
     <form id="login-form container is-fluid " class="card-body columns" action="/login" method="POST">
 
       <div class="field column is-one-third">
-        <label class="label">Username</label>
+        <label class="label" for="username-login">Username</label>
         <div class="control has-icons-left has-icons-right">
-        <input class="input" type="text" placeholder="Text input">
+        <input id="username-login" class="input" type="text" placeholder="Text input">
         <span class="icon is-small is-left">
           <i class="fas fa-user"></i>
         </span>
@@ -15,9 +15,9 @@
       </div>
 
       <div class="field">
-          <label class="label">Password</label>
+          <label class="label" for="password-login">Password</label>
           <div class="control has-icons-left">
-            <input class="input" type="password" placeholder="Password">
+            <input id="password-login" class="input" type="password" placeholder="Password">
             <span class="icon is-small is-left">
               <i class="fas fa-lock"></i>
             </span>
@@ -37,9 +37,9 @@
     <h2 class="title is-3">Sign Up</h2>
     <form id="signup-form" class="card-body columns" action="/signup" method="POST">
       <div class="field column is-one-third">
-        <label class="label">Username</label>
+        <label class="label" for="username-signup">Username</label>
       <div class="control has-icons-left has-icons-right">
-        <input class="input" type="text" placeholder="Text input">
+        <input id="username-signup" class="input" type="text" placeholder="Text input">
         <span class="icon is-small is-left">
           <i class="fas fa-user"></i>
         </span>
@@ -49,9 +49,9 @@
       </div>
 
       <div class="field">
-        <label class="label">Email</label>
+        <label class="label" for="email-signup">Email</label>
         <div class="control has-icons-left has-icons-right">
-          <input class="input" type="email" placeholder="Email input">
+          <input id="email-signup" class="input" type="email" placeholder="Email input">
           <span class="icon is-small is-left">
             <i class="fas fa-envelope"></i>
           </span>
@@ -61,9 +61,9 @@
       </div>
 
       <div class="field">
-         <label class="label">Password</label>
+         <label class="label" for="password-signup" >Password</label>
         <p class="control has-icons-left">
-          <input class="input" type="password" placeholder="Password" requiredpattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+          <input id="password-signup" class="input" type="password" placeholder="Password" requiredpattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
           <span class="icon is-small is-left">
             <i class="fas fa-lock"></i>
           </span>
@@ -75,6 +75,7 @@
           <button class="button is-success" type="submit">
             Sign Up
           </button>
+          <a class="button login-link" href="/login"></a>
         </p>
       </div>
     </form>
@@ -93,11 +94,7 @@
       </div>
   </footer>
 
-<script src="/public/JS/login.js"></script> 
-
- <script src="/js/add-entry.js"></script>
-
- </body>
  
 
+<script src="/JS/login.js"></script> 
 
