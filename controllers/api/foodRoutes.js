@@ -3,16 +3,15 @@ const withAuth = require("../../utils/auth");
 const { Food, User } = require("../../models");
 
 //GET 'api/food' request to get all food entries
-router.get("/food", async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     const dbFoodData = await Food.findAll({
-      where: { id: req.params.id },
       attributes: ["user_id", "food_name", "serving_amount", "calorie_count"],
       order: [["created_at", "DESC"]],
       include: [
         {
           model: User,
-          attributes: ["user_id", "username"],
+          attributes: ["username"],
         },
       ],
     });
