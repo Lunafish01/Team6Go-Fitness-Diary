@@ -2,7 +2,12 @@ const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 const bcrypt = require("bcrypt");
 
-class User extends Model {}
+class User extends Model {
+  // Method to check if the entered password matches the stored hashed password
+  checkPassword(loginPassword) {
+    return bcrypt.compareSync(loginPassword, this.password);
+  }
+}
 
 User.init(
   {
@@ -31,7 +36,7 @@ User.init(
       validate: {
         len: [8],
       },
-    }
+    },
   },
   {
     hooks: {
