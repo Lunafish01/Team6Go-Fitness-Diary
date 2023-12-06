@@ -58,6 +58,8 @@ router.get("/dashboard", withAuth, async (req, res) => {
   }
 });
 
+
+
 // GET login route direct user to login page
 router.get("/", (req, res) => {
   if (req.session.logged_in) {
