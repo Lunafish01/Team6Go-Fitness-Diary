@@ -82,7 +82,7 @@ router.get("/dashboard", withAuth, async (req, res) => {
 });
 
 // GET login route direct user to login page
-router.get("/login", (req, res) => {
+router.get("/", (req, res) => {
   if (req.session.logged_in) {
     // If the user is already logged in, redirect the request to another route
     res.redirect("/");
