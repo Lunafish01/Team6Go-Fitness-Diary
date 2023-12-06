@@ -82,9 +82,12 @@ router.post("/", async (req, res) => {
 //POST route for handling user login
 router.post("/login", async (req, res) => {
   try {
+    console.log("Username", req.body.uersname);
+    console.log("Password", req.body.password);
+
     const dbUserData = await User.findOne({
       where: {
-        email: req.body.email,
+        username: req.body.username,
       },
     });
 
