@@ -1,9 +1,9 @@
 <section class="hero is-success" id="profile-hero">
   <div class="hero-body">
-    <h1 class="title">My Profile</h1>
+    <h1 class="title1"><strong>My Profile</strong></h1>
     <div class="level">
-      <p class="level-item"><strong>Username:</strong> {{user.username}}</p>
-      <p class="level-item"><strong>Email:</strong> {{user.email}}</p>
+      <p class="level-item"><strong>Username:  {{user.username}}</strong></p>
+      <p class="level-item"><strong>Email:  {{user.email}}</strong></p>
     </div>
   </div>
 </section>
@@ -20,36 +20,36 @@
   </div>
 
   {{! To loop through entries for only logged in user }}
-  <div>
-    <h2>Steps Taken</h2>
+  <div id="data">
+    <h2><strong>Steps Taken</strong></h2>
     <ul>
       {{#each steps}}
-        <li>Date:
-          {{date}}, Steps:
-          {{step_count}}, Calories Burned:
-          {{calories_burned}}, Distance:
+        <li class="data">Date:
+          {{date}},<br> Steps:
+          {{step_count}},<br> Calories Burned:
+          {{calories_burned}},<br> Distance:
           {{distance_travelled}}</li>
       {{/each}}
     </ul>
 
     {{! Display water entries }}
-    <h2>Water Consumption</h2>
+    <h2><strong>Water Consumption</strong></h2>
     <ul>
       {{#each water}}
         <li>Date:
-          {{date}}, Daily Goal:
-          {{daily_goal}}, Water Consumed:
+          {{date}},<br> Daily Goal:
+          {{daily_goal}},<br> Water Consumed:
           {{actual_intake}}</li>
       {{/each}}
     </ul>
 
     {{! Display food entries }}
-    <h2>Food Consumption</h2>
+    <h2><strong>Food Consumption</strong></h2>
     <ul>
       {{#each food}}
         <li id="food-title">Food:
-          {{food_name}}, Serving Size:
-          {{serving_amount}}, Calories:
+          {{food_name}},<br> Serving Size:
+          {{serving_amount}},<br> Calories:
           {{calorie_count}}</li>
       {{/each}}
     </ul>
