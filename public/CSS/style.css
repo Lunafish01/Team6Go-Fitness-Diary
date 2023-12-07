@@ -1,9 +1,9 @@
-/* Background color of body on water HTML */
+/* Background color of body on water handlebars */
 body {
     background-color: white;
   }
   
-  /* Hero on water html */
+  /* Hero on water handlebars */
   .hero {
     height: 600px;
     width: 100%;
@@ -13,7 +13,7 @@ body {
     background-size: cover
 }
 
-/* Hero on main html */
+/* Hero on main handlebars */
 .hero1 {
     height: 350px;
     width: 100%;
@@ -23,7 +23,7 @@ body {
     background-size: cover
   }
   
-  /* Hero on main2 html */
+  /* Hero on main2 handlebars */
   .hero2 {
     height: 500px;
     width: 1200px;
@@ -34,7 +34,7 @@ body {
     text-align: center;
   }
 
-  /* navigation on main html */
+  /* navigation on main handlebars */
 .tabs {
     color: rgb(10, 108, 221); 
     font-size: 25px;
@@ -45,7 +45,7 @@ body {
     position: center;
   }
   
-    /* Main Title at the top of water HTML */
+    /* Main Title at the top of water handlebars */
     #HeroTitle { 
       color: black;
       position: left;
@@ -57,19 +57,19 @@ body {
     }
   
     
-    /* Main Title at the top of hero title 1 HTML */
+    /* Hero Title at the top of login handlebars */
     #HeroTitle1 { 
-      position:right;
-      text-align: right;
-      font-size: 40px;
+      position:left;
+      text-align: left;
+      font-size: 60px;
       font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
       letter-spacing: 50px;
-      padding: 400px 80px;
-      line-height: 1.5;
+      padding: 10px 0px;
+      line-height: 1;
       font-style: italic;
     }
   
-      /* Title at the top on food HTML hero */
+      /* Title at the top on food handlebars hero */
       #HeroTitle2 { 
         color: silver;
         position: left;
@@ -80,7 +80,7 @@ body {
         line-height: 1.5;
       }
   
-       /* Title at the top on steps HTML hero */
+       /* Title at the top on steps handlebars hero */
        #HeroTitle3 { 
         color: rgb(19, 104, 25);
         position: left;
@@ -91,7 +91,7 @@ body {
         line-height: 1.5;
       }
 
-      /* "intake" in title of water html */
+      /* "intake" in title of water handlebars */
   .intake {
     color: rgb(8, 8, 8)
   }
@@ -117,7 +117,7 @@ li {
   }
 
 
-/* Title on the main html */
+/* Title on the main handlebars */
   .title {
     color: rgb(52, 132, 217);
     position: center;
@@ -127,12 +127,12 @@ li {
     padding: 10px 0px;
     line-height: 1.5;
 }
-/* subtitle on the water.html "add water intake" */
+/* subtitle on the water handlebars "add water intake" */
   .title2 {
     color: rgb(30, 81, 133);
 }
 
-/* subtitle on the water.html "add water intake" */
+/* subtitle on the water handlebars "add water intake" */
 .is-4 {
   color: rgb(19, 104, 25);
 }
@@ -141,7 +141,7 @@ li {
   color: rgb(52, 132, 217)
 }
 
-/* date, daily goal, actual intake on water html */
+/* date, daily goal, actual intake on water handlebars */
   #new-water-entry {
     color: rgb(52, 132, 217);
     font-size: 30px;
@@ -149,7 +149,7 @@ li {
     padding: 0px 0px 50px 20px;
 }
   
-/* food name, serving amount, and calorie count on food html */
+/* food name, serving amount, and calorie count on food handlebars */
 #new-food-entry2 {
   color: rgb(19, 104, 25);
   font-size: 30px;
@@ -157,7 +157,7 @@ li {
   padding: 0px 0px 50px 20px;
 }
 
-/* date, Step count, and calories burned, and distance travelled on steps html */
+/* date, Step count, and calories burned, and distance travelled on steps handlebars */
 #new-steps-entry {
   color: rgb(19, 104, 25);
   font-size: 30px;
@@ -165,20 +165,20 @@ li {
   padding: 0px 0px 50px 20px;
 }
 
-/* date entry form on water html */
+/* date entry form on water handlebars */
 #post-title {
   height: 40px;
   width: 50%;
   border: none;
 }
 
-/* daily goal and actual intake entry form on water html */
+/* daily goal and actual intake entry form on water handlebars */
 #content {
   height: 40px;
   width: 50%;
   border: none;
 }
- /* Button on water html */
+ /* Button on water handlebars */
 .button {
   color: blue;
   background-color: rgb(0, 149, 255);
@@ -193,7 +193,7 @@ li {
   border: none;
 }
 
- /* Button on food html*/
+ /* Button on food handlebars */
  .button2 {
   color: rgb(144, 218, 152);
   background-color: rgb(6, 57, 11);
@@ -218,7 +218,7 @@ li {
 }*/
 
 
-/* Button on steps html*/
+/* Button on steps handlebars*/
 .button3 {
   color: rgb(12, 12, 12);
   background-color: rgb(246, 190, 6);
@@ -233,12 +233,12 @@ li {
 }
 
 
-/* Centered button on water html */
+/* Centered button on water handlebars */
 .control {
   text-align: center;
 }
 
-/* Footer on water html*/
+/* Footer on water handlebars */
 .footer {
     color: rgb(10, 126, 221); 
     /*background-color: black;*/
@@ -247,14 +247,14 @@ li {
     padding: 10px
   }
 
-  /* footer on food html */
+  /* footer on food handlebars */
   .footer {
     color: rgb(10, 91, 22);
     text-align: center;
     padding: 10px
   }
 
-   /* TEAMNAME at the bottom of water HTML */
+   /* TEAMNAME at the bottom of water handlebars */
 #TEAMNAME {
     color: black; 
     font-size: 25px;
@@ -266,7 +266,7 @@ li {
     }
   
     
-   /* TEAMNAME at the bottom of water HTML */
+   /* TEAMNAME at the bottom of water handlebars */
 #TEAMNAME2 {
   color: rgb(19, 104, 25); 
   font-size: 25px;
@@ -287,7 +287,7 @@ li {
     position: center;
     }
   
-    /* Our names at the bottom of water HTML */
+    /* Our names at the bottom of water handlebars */
     a {
       text-align: center;
       position: center;
@@ -297,7 +297,7 @@ li {
       text-decoration:none;
       }
   
-    /*hover over names at bottom of water html*/
+    /*hover over names at bottom of water handlebars */
     a:hover { color: rgb(181, 52, 217); }
 
     /*sign up button on login page*/
@@ -313,10 +313,7 @@ li {
     }
 
     /* login and sign up titles on the login/logout page */
-    .is-3 {
-      color: rgb(32, 66, 99);
-      
-    }
+  
 
     .label {
       color: rgb(32, 66, 99);
@@ -325,19 +322,50 @@ li {
       font-size: 16px;
       padding: 0px 0px;
       line-height: 1.5;
-      
     }
 
-    .input {
-      height: 20px;
-      width: 50%;
+
+    .is-centered {
+      height: 100px;
+    }
+
+
+    /*food handlebars*/
+    #food-title {
+      border: black 1px solid;
+    }
+
+     /*login entry boxes*/
+    #username-login {
+      background-color: white;
+      width: 90%;
+      height:40px;
+      border: none;
+      align-content: left;
+    }
+
+         /*login entry boxes*/
+    #password-login {
+      width: 90%;
+      height:40px;
       border: none;
     }
 
-    .is-centered {
-      height: 200px;
+    /*signup entry boxes*/
+    #username-signup {
+      width: 80%;
+      height:40px;
+      border: none;
     }
-
-    #food-title {
-      border: black 1px solid;
+/*signup entry boxes*/
+    #email-signup {
+      width: 80%;
+      height:40px;
+      border: none;
+    }
+/*signup entry boxes*/
+    #password-signup {
+      width: 80%;
+      height:40px;
+      border: none;
     }
