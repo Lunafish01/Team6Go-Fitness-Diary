@@ -147,6 +147,95 @@ router.get("/food", withAuth, async (req, res) => {
   }
 });
 
+// Get steps route
+router.get("/steps", withAuth, async (req, res) => {
+  try {
+    // Find the logged in user based on the session ID
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ["password"] },
+    });
+
+    const user = userData.get({ plain: true });
+
+    // to show logged in users entry only
+    const stepsPromise = Steps.findAll({
+      where: { user_id: req.session.user_id },
+      attributes: [
+        "id",
+        "date",
+        "step_count",
+        "calories_burned",
+        "distance_travelled",
+      ],
+    });
+
+    // Wait for all promises to resolve
+    const [stepsData] = await Promise.all([
+      stepsPromise,
+    ]);
+
+    const steps = stepsData.map((step) => step.get({ plain: true }));
+  
+    console.log("Steps data:", steps);;
+
+    // Render the dashboard view with the combined data
+    res.render("steps", {
+      user,
+      steps,
+      loggedIn: req.session.loggedIn,
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+// Get water route
+router.get("/water", withAuth, async (req, res) => {
+  try {
+    // Find the logged in user based on the session ID
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ["password"] },
+    });
+
+    const user = userData.get({ plain: true });
+
+    // to show logged in users entry only
+  
+    const waterPromise = Water.findAll({
+      where: { user_id: req.session.user_id },
+      attributes: ["id", "date", "daily_goal", "actual_intake"],
+    });
+
+    // Wait for all promises to resolve
+    const [waterData] = await Promise.all([
+     
+      waterPromise,
+     
+    ]);
+
+   
+    const water = waterData.map((waterEntry) =>
+      waterEntry.get({ plain: true })
+    );
+ 
+
+   
+    console.log("Water data:", water);
+   
+
+    // Render the dashboard view with the combined data
+    res.render("water", {
+      user,
+      water,
+      loggedIn: req.session.loggedIn,
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
 // GET login route direct user to login page
 router.get("/", (req, res) => {
   if (req.session.logged_in) {

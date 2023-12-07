@@ -1,21 +1,12 @@
- <!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Step Count</title>
-  <link rel="stylesheet" href="public/CSS/style.css">
-</head>
 
 <body>
-  <div class="hero" style="background-image: url(public/images/steps2.jpg)">
+  <div class="hero" style="background-image: url(/images/steps2.jpg)">
     <p id="HeroTitle3"><strong>Track your <span class="intake">steps</span>...</strong></p>
 </div> 
 
 
 <h2 class="title is-4 container is-fluid">Create New Steps Entry</h2>
-<form class="field container is-fluid" id="new-steps-entry">
+<form class="field container is-fluid" id="new-steps-entry" action="/steps" method="POST">
     <div class="form-row">
         <label for="date" class="form-label subtitle is-5"><strong>Date:</strong></label>
         <input type="text" id="date" name="date" class="form-input form-control" />
@@ -54,6 +45,6 @@
         </div>
     </footer>
 
-<script src="/js/add-entry.js"></script>
+
 
 <script src="/js/steps-entry.js"></script>
