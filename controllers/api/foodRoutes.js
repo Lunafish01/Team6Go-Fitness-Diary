@@ -6,7 +6,7 @@ const { Food, User } = require("../../models");
 router.get("/", async (req, res) => {
   try {
     const dbFoodData = await Food.findAll({
-      attributes: ["user_id", "food_name", "serving_amount", "calorie_count"],
+      attributes: ["id", "user_id", "food_name", "serving_amount", "calorie_count"],
       order: [["created_at", "DESC"]],
       include: [
         {

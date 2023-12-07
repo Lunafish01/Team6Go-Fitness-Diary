@@ -83,4 +83,56 @@ router.post("/", withAuth, async (req, res) => {
     }
   });
 
+//PUT route to edit user by id
+router.put("/:id", withAuth, async (req, res) => {
+  try {
+    const [affectedRows] = await Water.update(
+      {
+        date: req.body.date,
+        daily_goal: req.body.daily_goal,
+        actual_intake: req.body.actual_intake,
+      },
+      {
+        where: {
+          id: req.params.id,
+          user_id: req.session.user_id,
+        },
+      }
+    );
+
+    if (affectedRows === 0) {
+      res.status(404).json({ message: "No water entry found with this id" });
+      return;
+    }
+
+    res.json({ message: "Water entry updated successfully" });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+});
+
+
+//Delete route to delete user by id
+router.delete("/:id", withAuth, async (req, res) => {
+  try {
+    const deletedRows = await Water.destroy({
+      where: {
+        id: req.params.id,
+        user_id: req.session.user_id,
+      },
+    });
+
+    if (deletedRows === 0) {
+      res.status(404).json({ message: "No water entry found with this id" });
+      return;
+    }
+
+    res.json({ message: "Water entry deleted successfully" });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+});
+
 module.exports = router;
