@@ -1,32 +1,34 @@
-async function newEntryHandler(event) {
+
+  const newEntryHandler = async (event) => {
     event.preventDefault();
   
-    const date = document.querySelector('input[name="date"]').value;
-    const steps = document.querySelector('input[name="step-count"]').value;
-    const calories = document.querySelector('input[name="calories-burned"]').value;
-    const distance = document.querySelector('input[name="distance-travelled"]').value;
+    const date = document.querySelector("#date").value.trim();
+    const steps = document.querySelector("#step-count").value.trim();
+    const calories = document.querySelector("#calories-burned").value.trim();
+    const distance = document.querySelector("#distance-travelled").value.trim();
 
-    const response = await fetch(`/api/stepsRoutes`, {
-      method: "POST",
-      body: JSON.stringify({
-        date,
-        steps,
-        calories,
-        distance
-        
-      }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    if (date && steps && calories && distance) {
+      const response = await fetch("/api/steps", {
+        method: "POST",
+        body: JSON.stringify({  date,
+          steps,
+          calories,
+          distance
+        }),
+        headers: { "Content-Type": "application/json" },
+      });
   
-    if (response.ok) {
-        document.location.replace("/dashboard");
-    } else {
-        const errorMessage = await response.text();
-        alert(`Error: ${errorMessage}`);
+      if (response.ok) {
+        document.location.replace("/profile");
+      } else {
+        alert(response.statusText);
+      }
     }
-    
-  }
+  };
   
-  document.querySelector("#new-steps-entry").addEventListener("submit", newEntryHandler);
+  document.addEventListener("DOMContentLoaded", function () {
+    document;
+    document
+      .querySelector("#new-steps-entry")
+      .addEventListener("submit", newEntryHandler);
+  });
