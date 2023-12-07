@@ -17,10 +17,10 @@
     </ul>
 
     {{!-- Display food entries --}}
-    <h2>Food Consumption</h2>
-    <ul>
+    <h2 >Food Consumption</h2>
+    <ul >
       {{#each food}}
-        <li>Food: {{food_name}}, Serving Size: {{serving_amount}}, Calories: {{calorie_count}}</li>
+        <li id="food-title">Food: {{food_name}}, Serving Size: {{serving_amount}}, Calories: {{calorie_count}}</li>
       {{/each}}
     </ul>
   {{else}}

@@ -1,13 +1,11 @@
 <body>
-  <div class="hero" style="background-image: url(images/cover.jpg)">
+  <div class="hero" style="background-image: url(/images/cover.jpg)">
     <p id="HeroTitle2"><strong>Fitness Tracker</strong></p>
 </div> 
 
 <section>
     <h2 class="title is-3 container is-fluid ">Login</h2>
-    <form id="login-form " class="container is-fluid card-body columns" 
-    {{!-- action="/login"  --}}
-    method="POST">
+    <form id="login-form " class="container is-fluid card-body columns" action="/login" method="POST">
 
       <div class="field column is-one-third">
         <label class="label" for="username-login">Username</label>
@@ -33,10 +31,9 @@
 
       <div class="field">
         <p class="control">
-          <button class="button is-success" href="/dashboard">
+          <button class="button is-success" type="submit">
             Login
           </button>
-          {{!-- type="submit" --}}
       </div>
     </form>
   </section> 
@@ -83,7 +80,7 @@
           <button class="button is-success" type="submit">
             Sign Up
           </button>
-          <a class="button login-link" href="/dashboard"></a>
+         
         </p>
       </div>
     </form>
