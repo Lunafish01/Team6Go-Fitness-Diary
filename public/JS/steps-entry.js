@@ -3,17 +3,17 @@
     event.preventDefault();
   
     const date = document.querySelector("#date").value.trim();
-    const steps = document.querySelector("#step-count").value.trim();
-    const calories = document.querySelector("#calories-burned").value.trim();
-    const distance = document.querySelector("#distance-travelled").value.trim();
+    const step_count = document.querySelector("#step-count").value.trim();
+    const calories_burned = document.querySelector("#calories-burned").value.trim();
+    const distance_travelled = document.querySelector("#distance-travelled").value.trim();
 
-    if (date && steps && calories && distance) {
+    if (date && step_count && calories_burned && distance_travelled) {
       const response = await fetch("/api/steps", {
         method: "POST",
         body: JSON.stringify({  date,
-          steps,
-          calories,
-          distance
+          step_count,
+          calories_burned,
+          distance_travelled
         }),
         headers: { "Content-Type": "application/json" },
       });
