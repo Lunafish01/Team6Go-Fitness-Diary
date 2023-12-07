@@ -1,26 +1,26 @@
 <section>
 {{#if loggedIn}}
     {{!-- Display steps --}}
-    <h2>Steps Taken</h2>
+    <h2 class="dashtitles">Steps Taken:</h2>
     <ul>
       {{#each steps}}
-        <li class="steps-div">Username: {{user.username}}, Date: {{date}}, Steps: {{step_count}}, Calories Burned: {{calories_burned}}, Distance: {{distance_travelled}}</li>
+        <li class="dasdiv">Username: {{user.username}}, Date: {{date}}, Steps: {{step_count}}, Calories Burned: {{calories_burned}}, Distance: {{distance_travelled}}</li>
       {{/each}}
     </ul>
 
     {{!-- Display water entries --}}
-    <h2>Water Consumption</h2>
+    <h2 class="dashtitles">Water Consumption:</h2>
     <ul>
       {{#each water}}
-        <li class="water-div">Username: {{user.username}}, Date: {{date}}, Daily Goal: {{daily_goal}}, Water Consumed: {{actual_intake}}</li>
+        <li class="dasdiv">Username: {{user.username}}, Date: {{date}}, Daily Goal: {{daily_goal}}, Water Consumed: {{actual_intake}}</li>
       {{/each}}
     </ul>
 
     {{!-- Display food entries --}}
-    <h2 >Food Consumption</h2>
+    <h2 class="dashtitles">Food Consumption:</h2>
     <ul >
       {{#each food}}
-        <li class="food-div">Username: {{user.username}}, Food: {{food_name}}, Serving Size: {{serving_amount}}, Calories: {{calorie_count}}</li>
+        <li class="dasdiv">Username: {{user.username}}, Food: {{food_name}}, Serving Size: {{serving_amount}}, Calories: {{calorie_count}}</li>
       {{/each}}
     </ul>
   {{else}}
