@@ -337,3 +337,7 @@ li {
     .is-centered {
       height: 200px;
     }
+
+    #food-title {
+      border: black 1px solid;
+    }
