@@ -64,7 +64,7 @@ body {
       font-size: 60px;
       font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
       letter-spacing: 50px;
-      padding: 10px 0px;
+      padding: 10px 20px;
       line-height: 1;
       font-style: italic;
     }
@@ -301,7 +301,7 @@ li {
     a:hover { color: rgb(181, 52, 217); }
 
     /*sign up button on login page*/
-.button1 {
+.btn {
   color: rgb(248, 247, 247);
   background-color: rgb(61, 60, 57);
   border-radius: 50px 50px 50px 50px;
@@ -311,6 +311,7 @@ li {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   border: none
     }
+
 
     /* login and sign up titles on the login/logout page */
   
@@ -333,39 +334,4 @@ li {
     /*food handlebars*/
     #food-title {
       border: black 1px solid;
-    }
-
-     /*login entry boxes*/
-    #username-login {
-      background-color: white;
-      width: 90%;
-      height:40px;
-      border: none;
-      align-content: left;
-    }
-
-         /*login entry boxes*/
-    #password-login {
-      width: 90%;
-      height:40px;
-      border: none;
-    }
-
-    /*signup entry boxes*/
-    #username-signup {
-      width: 80%;
-      height:40px;
-      border: none;
-    }
-/*signup entry boxes*/
-    #email-signup {
-      width: 80%;
-      height:40px;
-      border: none;
-    }
-/*signup entry boxes*/
-    #password-signup {
-      width: 80%;
-      height:40px;
-      border: none;
     }
