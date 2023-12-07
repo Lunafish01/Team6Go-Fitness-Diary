@@ -64,7 +64,7 @@ body {
       font-size: 60px;
       font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
       letter-spacing: 50px;
-      padding: 10px 0px;
+      padding: 10px 20px;
       line-height: 1;
       font-style: italic;
     }
@@ -178,8 +178,10 @@ li {
   width: 50%;
   border: none;
 }
+
  /* Button on water html */
 .button, .btn-water {
+
   color: blue;
   background-color: rgb(0, 149, 255);
   border-radius: 1px 300px 300px 300px;
@@ -218,8 +220,10 @@ li {
 }*/
 
 
+
 /* Button on steps html*/
 .button3, .btn-steps{
+
   color: rgb(12, 12, 12);
   background-color: rgb(246, 190, 6);
   border-radius: 20px 20px 20px 20px;
@@ -301,7 +305,7 @@ li {
     a:hover { color: rgb(181, 52, 217); }
 
     /*sign up button on login page*/
-.button1 {
+.btn {
   color: rgb(248, 247, 247);
   background-color: rgb(61, 60, 57);
   border-radius: 50px 50px 50px 50px;
@@ -311,6 +315,7 @@ li {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   border: none
     }
+
 
     /* login and sign up titles on the login/logout page */
   
@@ -329,37 +334,29 @@ li {
       height: 100px;
     }
 
-
-    /*food handlebars*/
-    #food-title {
-      border: black 1px solid;
+    .steps-div {
+       margin: 10px;
+       box-shadow: 5;
+       border: black 1px solid;
+       border-width: 5px;
+       border-radius: 20px;
+       font-weight: 30px;
+       font-family: sans-serif;
+       color: black;
     }
 
-     /*login entry boxes*/
-    #username-login {
-      background-color: white;
-      width: 90%;
-      height:40px;
-      border: none;
-      align-content: left;
+    .water-div {
+         margin: 10px;
+       border: black 1px solid;
+       border-width: 5px;
+       border-radius: 20px;
     }
 
-         /*login entry boxes*/
-    #password-login {
-      width: 90%;
-      height:40px;
-      border: none;
-    }
-
-    /*signup entry boxes*/
-    #username-signup {
-      width: 80%;
-      height:40px;
-      border: none;
-    }
-
-    #food-title {
-      border: black 1px solid;
+    .food-div {
+        margin: 10px;
+       border: black 1px solid;
+       border-width: 5px;
+       border-radius: 20px;
     }
 
     #profile-hero {
