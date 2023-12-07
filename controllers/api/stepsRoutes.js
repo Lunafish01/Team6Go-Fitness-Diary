@@ -86,4 +86,57 @@ router.post("/", withAuth, async (req, res) => {
   }
 });
 
+//PUT route to edit user by id
+router.put("/:id", withAuth, async (req, res) => {
+  try {
+    const [affectedRows] = await Steps.update(
+      {
+        date: req.body.date,
+        step_count: req.body.step_count,
+        calories_burned: req.body.calories_burned,
+        distance_travelled: req.body.distance_travelled,
+      },
+      {
+        where: {
+          id: req.params.id,
+          user_id: req.session.user_id,
+        },
+      }
+    );
+
+    if (affectedRows === 0) {
+      res.status(404).json({ message: "No steps entry found with this id" });
+      return;
+    }
+
+    res.json({ message: "Steps entry updated successfully" });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+});
+
+
+//Delete route to delete user by id
+router.delete("/:id", withAuth, async (req, res) => {
+  try {
+    const deletedRows = await Steps.destroy({
+      where: {
+        id: req.params.id,
+        user_id: req.session.user_id,
+      },
+    });
+
+    if (deletedRows === 0) {
+      res.status(404).json({ message: "No steps entry found with this id" });
+      return;
+    }
+
+    res.json({ message: "Steps entry deleted successfully" });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+});
+
 module.exports = router;
