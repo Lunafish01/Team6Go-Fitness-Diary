@@ -4,7 +4,7 @@
     <h2>Steps Taken</h2>
     <ul>
       {{#each steps}}
-        <li>Date: {{date}}, Steps: {{step_count}}, Calories Burned: {{calories_burned}}, Distance: {{distance_travelled}}</li>
+        <li class="steps-div">Username: {{user.username}}, Date: {{date}}, Steps: {{step_count}}, Calories Burned: {{calories_burned}}, Distance: {{distance_travelled}}</li>
       {{/each}}
     </ul>
 
@@ -12,7 +12,7 @@
     <h2>Water Consumption</h2>
     <ul>
       {{#each water}}
-        <li>Date: {{date}}, Daily Goal: {{daily_goal}}, Water Consumed: {{actual_intake}}</li>
+        <li class="water-div">Username: {{user.username}}, Date: {{date}}, Daily Goal: {{daily_goal}}, Water Consumed: {{actual_intake}}</li>
       {{/each}}
     </ul>
 
@@ -20,7 +20,7 @@
     <h2 >Food Consumption</h2>
     <ul >
       {{#each food}}
-        <li id="food-title">Food: {{food_name}}, Serving Size: {{serving_amount}}, Calories: {{calorie_count}}</li>
+        <li class="food-div">Username: {{user.username}}, Food: {{food_name}}, Serving Size: {{serving_amount}}, Calories: {{calorie_count}}</li>
       {{/each}}
     </ul>
   {{else}}
