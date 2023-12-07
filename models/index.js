@@ -1,6 +1,6 @@
 const User = require("./user");
 const Food = require("./food");
-const Water = require("./water");
+const Water = require("./Water");
 const Steps = require("./Steps");
 
 User.hasMany(Steps, {
