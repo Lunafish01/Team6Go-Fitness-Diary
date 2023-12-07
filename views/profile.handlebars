@@ -1,19 +1,76 @@
-<section class="hero is-success">
-      <div class="hero-body">
-      <h1>My Profile</h1>
-      <div>
-        <p><strong>Username:</strong> {{user.username}}</p>
-        <p><strong>Email:</strong> {{user.email}}</p>
-        <div>
-          <p>Hello!</p>
-        </div>
-      </div>
+<section class="hero is-success" id="profile-hero">
+  <div class="hero-body">
+    <h1 class="title">My Profile</h1>
+    <div class="level">
+      <p class="level-item"><strong>Username:</strong> {{user.username}}</p>
+      <p class="level-item"><strong>Email:</strong> {{user.email}}</p>
     </div>
-    </section>
-    <section>
-      <div class="container is-fluid">
-        <div class="notification is-primary">
-          {{!-- put steps, water, and food entry buttons here to take to matching handlebars  --}}
-        </div>
-      </div>
-    </section>
+  </div>
+</section>
+
+<section>
+  <div class="section is-fluid" id="profile-container">
+    <div class="level">
+      {{! put steps, water, and food entry buttons here to take to matching handlebars  }}
+      <button class="btn-food" type="submit" ><a href="/food">Add Food Entry</a></button>
+      <button class="btn-steps" type="submit"><a href="/steps">Add Steps Entry</a></button>
+      <button class="btn-water" type="submit"><a href="/water">Add Water Entry</a></button>
+    </div>
+
+  </div>
+
+  {{! To loop through entries for only logged in user }}
+  <div>
+    <h2>Steps Taken</h2>
+    <ul>
+      {{#each steps}}
+        <li>Date:
+          {{date}}, Steps:
+          {{step_count}}, Calories Burned:
+          {{calories_burned}}, Distance:
+          {{distance_travelled}}</li>
+      {{/each}}
+    </ul>
+
+    {{! Display water entries }}
+    <h2>Water Consumption</h2>
+    <ul>
+      {{#each water}}
+        <li>Date:
+          {{date}}, Daily Goal:
+          {{daily_goal}}, Water Consumed:
+          {{actual_intake}}</li>
+      {{/each}}
+    </ul>
+
+    {{! Display food entries }}
+    <h2>Food Consumption</h2>
+    <ul>
+      {{#each food}}
+        <li id="food-title">Food:
+          {{food_name}}, Serving Size:
+          {{serving_amount}}, Calories:
+          {{calorie_count}}</li>
+      {{/each}}
+    </ul>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+
+      <h3 id="TEAMNAME">TEAM6GO!</h3>
+      <a href="https://github.com/erica-210"><strong>Erica M San Miguel</strong></a>
+      <a href="https://github.com/Lunafish01"><strong>Joshua Luna</strong></a>
+      <a href="https://github.com/mcalvario"><strong>Maribel Calvario</strong></a>
+    </p>
+
+  </div>
+</footer>
+
+<script src="/JS/add-entry.js"></script>
+<script src="/JS/steps-entry.js"></script>
+<script src="/JS/water-entry.js"></script>
+<script src="/JS/logout.js"></script>

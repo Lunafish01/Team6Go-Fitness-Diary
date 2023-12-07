@@ -178,8 +178,8 @@ li {
   width: 50%;
   border: none;
 }
- /* Button on water handlebars */
-.button {
+ /* Button on water html */
+.button, .btn-water {
   color: blue;
   background-color: rgb(0, 149, 255);
   border-radius: 1px 300px 300px 300px;
@@ -193,8 +193,8 @@ li {
   border: none;
 }
 
- /* Button on food handlebars */
- .button2 {
+ /* Button on food html*/
+ .button2, .btn-food {
   color: rgb(144, 218, 152);
   background-color: rgb(6, 57, 11);
   border-radius: 20px 20px 20px 20px;
@@ -218,8 +218,8 @@ li {
 }*/
 
 
-/* Button on steps handlebars*/
-.button3 {
+/* Button on steps html*/
+.button3, .btn-steps{
   color: rgb(12, 12, 12);
   background-color: rgb(246, 190, 6);
   border-radius: 20px 20px 20px 20px;
@@ -357,15 +357,13 @@ li {
       height:40px;
       border: none;
     }
-/*signup entry boxes*/
-    #email-signup {
-      width: 80%;
-      height:40px;
-      border: none;
+
+    #food-title {
+      border: black 1px solid;
     }
-/*signup entry boxes*/
-    #password-signup {
-      width: 80%;
-      height:40px;
-      border: none;
+
+    #profile-hero {
+      height: 170px;
     }
+
+    
