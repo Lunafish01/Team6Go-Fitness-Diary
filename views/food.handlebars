@@ -1,12 +1,4 @@
- <!DOCTYPE html>
-<html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meals</title>
-  <link rel="stylesheet" href="public/CSS/style.css">
-</head>
 
 <body>
   <div class="hero" style="background-image: url(/images/food2.jpg)">
@@ -15,11 +7,11 @@
 
 
 
-<h2 class="title is-4 container is-fluid">Add Meals</h2>
-<form class="field container is-fluid" id="new-food-entry2">
+<h2 class="title is-4 container is-fluid">Create New Food Entry</h2>
+<form class="field container is-fluid" id="new-food-entry2" action="/food" method="POST">
     <div class="form-row">
         <label for="meal-name" class="form-label subtitle is-5"><strong>Meal Name:</strong></label>
-        <input type="text" id="meal-name" name="post-title" class="form-input form-control" />
+        <input type="text" id="meal-name" name="meal-name" class="form-input form-control" />
     </div>
     <div class="form-row">
         <label class="form-label subtitle is-5" for="calories"><strong>Calories:</strong></label>
@@ -32,7 +24,7 @@
     <div class="field">
         <p class="control">
             <button type="submit" class="button2 is-success">
-                <strong>Post</strong>
+                <strong><a>Post</a></strong>
             </button>
         </p>
     </div>
@@ -54,4 +46,6 @@
   </footer>
   </body>
 
-<script src="/js/food-entry.js"></script>
+
+
+<script src="/JS/add-entry.js"></script> 
