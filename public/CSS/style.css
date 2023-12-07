@@ -338,8 +338,29 @@ li {
       height: 200px;
     }
 
-    #food-title {
-      border: black 1px solid;
+    .steps-div {
+       margin: 10px;
+       box-shadow: 5;
+       border: black 1px solid;
+       border-width: 5px;
+       border-radius: 20px;
+       font-weight: 30px;
+       font-family: sans-serif;
+       color: black;
+    }
+
+    .water-div {
+         margin: 10px;
+       border: black 1px solid;
+       border-width: 5px;
+       border-radius: 20px;
+    }
+
+    .food-div {
+        margin: 10px;
+       border: black 1px solid;
+       border-width: 5px;
+       border-radius: 20px;
     }
 
     #profile-hero {
