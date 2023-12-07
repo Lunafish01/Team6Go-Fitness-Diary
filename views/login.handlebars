@@ -1,11 +1,12 @@
 <body>
   <div class="hero" style="background-image: url(/images/cover.jpg)">
-    <p id="HeroTitle2"><strong>Fitness Tracker</strong></p>
+    <p id="HeroTitle1"><strong>Fitness<br>Diary</strong></p>
+    
 </div> 
 
 <section>
-    <h2 class="title is-3 container is-fluid ">Login</h2>
-    <form id="login-form " class="container is-fluid card-body columns" action="/login" method="POST">
+    <h2 class="title is-3 ">Login</h2>
+    <form id="login-form" class="card-body columns" action="/login" method="POST">
 
       <div class="field column is-one-third">
         <label class="label" for="username-login">Username</label>
@@ -31,7 +32,7 @@
 
       <div class="field">
         <p class="control">
-          <button class="button is-success" type="submit">
+          <button id="btn" class=" button is-success" type="submit">
             Login
           </button>
       </div>
@@ -39,7 +40,7 @@
   </section> 
 
   <section>
-    <h2 class="title is-3">Sign Up</h2>
+    <h2 class="title is-3 ">Sign Up</h2>
     <form id="signup-form" class="card-body columns" action="/signup" method="POST">
       <div class="field column is-one-third">
         <label class="label" for="username-signup">Username</label>
@@ -77,7 +78,7 @@
 
       <div class="field">
         <p class="control">
-          <button class="button is-success" type="submit">
+          <button id="btn" class="button is-success" type="submit">
             Sign Up
           </button>
          
@@ -100,4 +101,4 @@
   </footer>
 
 <script src="/JS/login.js"></script> 
-<script src="/JS/signup.js"></script> 
+<script src="/JS/signup.js"></script>
