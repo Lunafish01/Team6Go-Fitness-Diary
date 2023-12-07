@@ -24,11 +24,14 @@
     "fs": "^0.0.1-security",
     "handlebars": "^4.7.8",
     "mysql2": "^3.6.5",
+    "nf": "^0.0.3",
     "nodemon": "^3.0.2",
     "path": "^0.12.7",
     "sequelize": "^6.35.1"
   },
   "devDependencies": {
-    "eslint": "^7.32.0"
+    "bower": "^1.8.14",
+    "eslint": "^7.32.0",
+    "grunt": "^1.6.1"
   }
 }
