@@ -106,16 +106,48 @@ body {
     padding: 30px;
   }
 
+/*data on profile handlebars*/
 li {
-    color: rgb(52, 217, 58);
-    position: center;
-    text-align: center;
-    font-size: 40px;
-    letter-spacing: 6px;
-    padding: 10px 0px;
+    color: rgb(19, 104, 25);
+    position: left;
+    text-align: left;
+    font-size: 20px;
     line-height: 1.5;
+    padding: 20px 20px 20px 20px;
+    border-radius: 20px;
   }
 
+/*data on profile handlebars*/
+#profile-hero {
+  height: 170px;
+}
+
+/*data on profile handlebars*/
+.hero-body {
+  color: black;
+  background-color: white;
+  border-radius: 20px;
+  border: solid rgb(246, 190, 6);
+}
+
+/*data on profile handlebars*/
+.title1 {
+ color: black;
+ position: center;
+    text-align: center;
+    font-size: 30px;
+    line-height: 1.5;
+    padding: 20px 20px 20px 20px;
+    border-radius: 20px;
+    
+}
+
+/*data on profile handlebars*/
+#data {
+  font-size: 30px;
+  border: solid rgb(52, 132, 217);
+  padding: 20px;
+}
 
 /* Title on the main handlebars */
   .title {
@@ -124,7 +156,7 @@ li {
     text-align: center;
     font-size: 40px;
     letter-spacing: 6px;
-    padding: 10px 0px;
+   
     line-height: 1.5;
 }
 /* subtitle on the water handlebars "add water intake" */
@@ -181,7 +213,6 @@ li {
 
  /* Button on water html */
 .button, .btn-water {
-
   color: blue;
   background-color: rgb(0, 149, 255);
   border-radius: 1px 300px 300px 300px;
@@ -194,7 +225,6 @@ li {
   margin-left: 10px;
   border: none;
 }
-
 
  /* Button on food html*/
  .button2, .btn-food {
@@ -346,11 +376,21 @@ li {
        color: black;
     }
 
-    #profile-hero {
-      height: 170px;
+    .water-div {
+      margin: 10px;
+       border: black 1px solid;
+       border-width: 5px;
+       border-radius: 20px;
     }
 
-    .dashtitles {
+    .food-div {
+        margin: 10px;
+       border: black 1px solid;
+       border-width: 5px;
+       border-radius: 20px;
+    }
+
+   .dashtitles {
       font-size: 20px;
       color: red;
     }
