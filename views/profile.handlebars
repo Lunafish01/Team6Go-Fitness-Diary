@@ -1,4 +1,4 @@
-<section class="hero is-success" id="profile-hero">
+<section class="hero " id="profile-hero">
   <div class="hero-body">
     <h1 class="title1"><strong>My Profile</strong></h1>
     <div class="level">
@@ -21,10 +21,10 @@
 
   {{! To loop through entries for only logged in user }}
   <div id="data">
-    <h2><strong>Steps Taken</strong></h2>
+    <h2><strong>Steps Taken:</strong></h2>
     <ul>
       {{#each steps}}
-        <li class="data">Date:
+        <li class="data" >Date:
           {{date}},<br> Steps:
           {{step_count}},<br> Calories Burned:
           {{calories_burned}},<br> Distance:
@@ -33,7 +33,7 @@
     </ul>
 
     {{! Display water entries }}
-    <h2><strong>Water Consumption</strong></h2>
+    <h2><strong>Water Consumption:</strong></h2>
     <ul>
       {{#each water}}
         <li>Date:
@@ -44,7 +44,7 @@
     </ul>
 
     {{! Display food entries }}
-    <h2><strong>Food Consumption</strong></h2>
+    <h2><strong>Food Consumption:</strong></h2>
     <ul>
       {{#each food}}
         <li id="food-title">Food:
