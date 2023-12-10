@@ -1,26 +1,28 @@
 <section>
 {{#if loggedIn}}
     {{!-- Display steps --}}
-    <h2>Steps Taken</h2>
-    <ul>
+    <h2 class="dashtitles" id="dashsteps">Steps Taken:</h2>
+    <ul >
       {{#each steps}}
-        <li class="steps-div">Username: {{user.username}}, Date: {{date}}, Steps: {{step_count}}, Calories Burned: {{calories_burned}}, Distance: {{distance_travelled}}</li>
+      <div></div>
+        <li class=" dasdiv" id="data" >Username: {{user.username}}, <br> Date: {{date}},<br> Steps: {{step_count}},<br> Calories Burned: {{calories_burned}},<br> Distance: {{distance_travelled}} miles</li>
+      </div>
       {{/each}}
     </ul>
 
     {{!-- Display water entries --}}
-    <h2>Water Consumption</h2>
+    <h2 class="dashtitles" id="dashwater">Water Consumption:</h2>
     <ul>
       {{#each water}}
-        <li class="water-div">Username: {{user.username}}, Date: {{date}}, Daily Goal: {{daily_goal}}, Water Consumed: {{actual_intake}}</li>
+        <li class="dasdiv" id="data">Username: {{user.username}},<br> Date: {{date}},<br> Daily Goal: {{daily_goal}},<br> Water Consumed: {{actual_intake}} oz</li>
       {{/each}}
     </ul>
 
     {{!-- Display food entries --}}
-    <h2 >Food Consumption</h2>
+    <h2 class="dashtitles">Food Consumption:</h2>
     <ul >
       {{#each food}}
-        <li class="food-div">Username: {{user.username}}, Food: {{food_name}}, Serving Size: {{serving_amount}}, Calories: {{calorie_count}}</li>
+        <li class="dasdiv" id="data">Username: {{user.username}},<br> Food: {{food_name}},<br> Serving Size: {{serving_amount}},<br> Calories: {{calorie_count}}</li>
       {{/each}}
     </ul>
   {{else}}
@@ -29,7 +31,7 @@
 
 </section>
 
-<footer class="footer">
+<footer class="footer" id="dashwater">
       <div class="content has-text-centered">
           <p>
               

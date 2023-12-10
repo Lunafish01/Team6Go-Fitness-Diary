@@ -1,4 +1,4 @@
-<section class="hero is-success" id="profile-hero">
+<section class="hero " id="profile-hero">
   <div class="hero-body">
     <h1 class="title1"><strong>My Profile</strong></h1>
     <div class="level">
@@ -21,37 +21,49 @@
 
   {{! To loop through entries for only logged in user }}
   <div id="data">
-    <h2><strong>Steps Taken</strong></h2>
+    <h2><strong>Steps Taken:</strong></h2>
     <ul>
       {{#each steps}}
-        <li class="data">Date:
+        <li class="data" >Date:
           {{date}},<br> Steps:
           {{step_count}},<br> Calories Burned:
           {{calories_burned}},<br> Distance:
-          {{distance_travelled}}</li>
+          {{distance_travelled}}<br><button class="button is-success dashbtn" id="edbtn" type="submit">
+            <a href="/edit-steps">Edit</a>
+          </button> <button class="button is-danger" id="edbtn" type="submit">
+            <a href="/delete-steps">Delete</a>
+          </button></li>
       {{/each}}
     </ul>
 
     {{! Display water entries }}
-    <h2><strong>Water Consumption</strong></h2>
+    <h2><strong>Water Consumption:</strong></h2>
     <ul>
       {{#each water}}
         <li>Date:
           {{date}},<br> Daily Goal:
           {{daily_goal}},<br> Water Consumed:
           {{actual_intake}}</li>
-      {{/each}}
+      {{/each}}<br><button class="button is-success dashbtn" id="edbtn" type="submit">
+            <a href="/edit-steps">Edit</a>
+          </button> <button class="button is-danger" id="edbtn" type="submit">
+            <a href="/delete-steps">Delete</a>
+          </button>
     </ul>
 
     {{! Display food entries }}
-    <h2><strong>Food Consumption</strong></h2>
+    <h2><strong>Food Consumption:</strong></h2>
     <ul>
       {{#each food}}
         <li id="food-title">Food:
           {{food_name}},<br> Serving Size:
           {{serving_amount}},<br> Calories:
           {{calorie_count}}</li>
-      {{/each}}
+      {{/each}}<br><button class="button is-success dashbtn" id="edbtn" type="submit">
+            <a href="/edit-steps">Edit</a>
+          </button> <button class="button is-danger" id="edbtn" type="submit">
+            <a href="/delete-steps">Delete</a>
+          </button>
     </ul>
 
   </div>

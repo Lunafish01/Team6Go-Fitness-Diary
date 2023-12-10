@@ -17,7 +17,7 @@ const stepsData = [
   },
   {
     user_id: 3,
-    date: "2023-12-1",
+    date: "2023-12-01",
     step_count: 8946,
     calories_burned: 332.5,
     distance_travelled: 4.2,

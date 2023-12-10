@@ -170,13 +170,11 @@ router.get("/steps", withAuth, async (req, res) => {
     });
 
     // Wait for all promises to resolve
-    const [stepsData] = await Promise.all([
-      stepsPromise,
-    ]);
+    const [stepsData] = await Promise.all([stepsPromise]);
 
     const steps = stepsData.map((step) => step.get({ plain: true }));
-  
-    console.log("Steps data:", steps);;
+
+    console.log("Steps data:", steps);
 
     // Render the dashboard view with the combined data
     res.render("steps", {
@@ -201,28 +199,20 @@ router.get("/water", withAuth, async (req, res) => {
     const user = userData.get({ plain: true });
 
     // to show logged in users entry only
-  
+
     const waterPromise = Water.findAll({
       where: { user_id: req.session.user_id },
       attributes: ["id", "date", "daily_goal", "actual_intake"],
     });
 
     // Wait for all promises to resolve
-    const [waterData] = await Promise.all([
-     
-      waterPromise,
-     
-    ]);
+    const [waterData] = await Promise.all([waterPromise]);
 
-   
     const water = waterData.map((waterEntry) =>
       waterEntry.get({ plain: true })
     );
- 
 
-   
     console.log("Water data:", water);
-   
 
     // Render the dashboard view with the combined data
     res.render("water", {
@@ -233,6 +223,47 @@ router.get("/water", withAuth, async (req, res) => {
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
+  }
+});
+
+// edit food route
+router.get("/edit-food/:id", withAuth, async (req, res) => {
+  try {
+    const foodId = req.params.id;
+
+    // Find the logged in user based on the session ID
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ["password"] },
+    });
+
+    const user = userData.get({ plain: true });
+
+    // Fetch the specific food entry by ID for the logged-in user
+    const foodData = await Food.findOne({
+      where: {
+        id: foodId,
+        user_id: req.session.user_id, // Assuming there's a foreign key relationship between User and Food models
+      },
+      attributes: ["id", "food_name", "serving_amount", "calorie_count"],
+    });
+
+    if (!foodData) {
+      // Handle case where the food entry is not found
+      res.status(404).render('error', { error: 'Food entry not found' });
+      return;
+    }
+
+    const food = foodData.get({ plain: true });
+
+    // Render the edit-post view with the specific food data
+    res.render("edit-post", {
+      user,
+      food,
+      loggedIn: req.session.loggedIn,
+    });
+  } catch (err) {
+    console.error("Error rendering edit-food page:", err);
+    res.status(500).render('error', { error: 'Internal Server Error' });
   }
 });
 
