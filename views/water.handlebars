@@ -5,8 +5,9 @@
 </div> 
 
 <h2 class="title is-4 container is-fluid">Create New Water Entry</h2>
-<form class="field container is-fluid" id="new-water-entry">
-    <div class="form-row" >
+{{!-- added action and method classes below to make sure js is functioning --}}
+<form class="field container is-fluid" id="new-water-entry" action="/water" method="POST">
+    <div class="form-row">
         <label for="date" class="form-label subtitle is-5"><strong>Date:</strong></label>
         <input type="text" id="date" name="date" class="form-input form-control" />
     </div>
@@ -20,7 +21,9 @@
     </div>
     <div class="field">
         <p class="control">
-            <button type="submit" class="btn-water is-success"><strong>Post</strong></button>
+            <button type="submit" class="button is-success">
+                <strong>Post</strong>
+            </button>
         </p>
     </div>
 </form>
@@ -41,5 +44,5 @@
   </footer>
   </body>
 
-
-<script src="/js/water-entry.js"></script>
+{{!-- made a change to the pathing for script --}}
+<script src="/JS/water-entry.js"></script> 
