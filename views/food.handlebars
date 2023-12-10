@@ -1,51 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 
+    <link rel="stylesheet" href="/style.css">
+</head>
 
 <body>
-  <div class="hero" style="background-image: url(/images/food2.jpg)">
-    <p id="HeroTitle2"><strong> Track <span class="your"> your </span><span class="meals"> meals... </span></strong></p>
-</div> 
+    <div class="hero" style="background-image: url(/images/food2.jpg)">
+        <p id="HeroTitle2">Track your meals...</p>
+    </div> 
+    
+    
+    
+    <h2 class="title is-4 container is-fluid">Create New Food Entry</h2>
+    <form class="field container is-fluid" id="new-food-entry2" action="/food" method="POST">
+        <div class="form-row">
+            <label for="meal-name" class="form-label subtitle is-5"><strong>Meal Name:</strong></label>
+            <input type="text" id="meal-name" name="meal-name" class="form-input form-control" />
+        </div>
+        <div class="form-row">
+            <label class="form-label subtitle is-5" for="calories"><strong>Calories:</strong></label>
+            <input id="calories" name="calories" class="form-input form-control" />
+        </div>
+        <div class="form-row">
+            <label class="form-label subtitle is-5" for="serving-size"><strong>Serving Size:</strong></label>
+            <input id="serving-size" name="serving-size" class="form-input form-control" />
+        </div>
+        <div class="field">
+            <p class="control">
+                <button type="submit" class="button2 is-success">
+                    <strong><a>Post</a></strong>
+                </button>
+            </p>
+        </div>
+    </form>
+    
+    
+    
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                
+                <h3 id="TEAMNAME2">TEAM6GO!</h3>
+                <a href="https://github.com/erica-210"><strong>Erica M San Miguel</strong></a> 
+                <a href="https://github.com/Lunafish01"><strong>Joshua Luna</strong></a> 
+                <a href="https://github.com/mcalvario"><strong>Maribel Calvario</strong></a> 
+            </p>
+            
+        </div>
+    </footer>
+</body>
 
+{{!-- made a change to the pathing for script --}}
+<script src="/JS/add-entry.js"></script>
 
-
-<h2 class="title is-4 container is-fluid">Create New Food Entry</h2>
-<form class="field container is-fluid" id="new-food-entry2" action="/food" method="POST">
-    <div class="form-row">
-        <label for="meal-name" class="form-label subtitle is-5"><strong>Meal Name:</strong></label>
-        <input type="text" id="meal-name" name="meal-name" class="form-input form-control" />
-    </div>
-    <div class="form-row">
-        <label class="form-label subtitle is-5" for="calories"><strong>Calories:</strong></label>
-        <input id="calories" name="calories" class="form-input form-control" />
-    </div>
-    <div class="form-row">
-        <label class="form-label subtitle is-5" for="serving-size"><strong>Serving Size:</strong></label>
-        <input id="serving-size" name="serving-size" class="form-input form-control" />
-    </div>
-    <div class="field">
-        <p class="control">
-            <button type="submit" class="button2 is-success">
-                <strong><a>Post</a></strong>
-            </button>
-        </p>
-    </div>
-</form>
-
-
-
-<footer class="footer">
-      <div class="content has-text-centered">
-          <p>
-              
-              <h3 id="TEAMNAME2">TEAM6GO!</h3>
-              <a href="https://github.com/erica-210"><strong>Erica M San Miguel</strong></a> 
-              <a href="https://github.com/Lunafish01"><strong>Joshua Luna</strong></a> 
-              <a href="https://github.com/mcalvario"><strong>Maribel Calvario</strong></a> 
-          </p>
-
-      </div>
-  </footer>
-  </body>
-
-
-
-<script src="/JS/add-entry.js"></script> 
