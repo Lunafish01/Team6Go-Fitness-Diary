@@ -1,5 +1,4 @@
-// function to edit post
-const editEntryHandler = async (event) {
+const editEntryHandler = async (event) => {
   event.preventDefault();
 
   // Gather updated data from the form
@@ -9,26 +8,38 @@ const editEntryHandler = async (event) {
     serving_amount: document.getElementById("serving-size").value.trim(),
   };
 
-  const id = window.location.toString().split('/')[
-    window.location.toString().split('/').length - 1
+  const id = window.location.toString().split("/")[
+    window.location.toString().split("/").length - 1
   ];
 
+  const requestData = {
+    id: id,
+    updatedData: updatedData,
+  };
+
+  console.log("Updated Data:", updatedData);
+  console.log("Food ID:", id);
+
   const response = await fetch(`/api/food/${id}`, {
-    method: 'PUT',
-    body: JSON.stringify(updatedData),
+    method: "PUT",
+    body: JSON.stringify(
+     requestData),
     headers: {
-      'Content-Type': 'application/json',
+      "Content-Type": "application/json",
     },
   });
 
+  console.log("API Response:", response);
 
   if (response.ok) {
-    document.location.replace('/dashboard');
+    document.location.replace("/profile");
   } else {
     alert(response.statusText);
   }
-}
+};
 
-document
-  .querySelector(".edit-food-form")
-  .addEventListener("submit", editEntryHandler);
+document.addEventListener("DOMContentLoaded", function () {
+  document
+    .querySelector(".edit-food-form")
+    .addEventListener("submit", editEntryHandler);
+});

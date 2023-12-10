@@ -45,9 +45,9 @@
           {{daily_goal}},<br> Water Consumed:
           {{actual_intake}}</li>
       {{/each}}<br><button class="button is-success dashbtn" id="edbtn" type="submit">
-            <a href="/edit-steps">Edit</a>
+            <a href="/edit-water">Edit</a>
           </button> <button class="button is-danger" id="edbtn" type="submit">
-            <a href="/delete-steps">Delete</a>
+            <a href="/delete-water">Delete</a>
           </button>
     </ul>
 
@@ -58,12 +58,12 @@
         <li id="food-title">Food:
           {{food_name}},<br> Serving Size:
           {{serving_amount}},<br> Calories:
-          {{calorie_count}}</li>
-      {{/each}}<br><button class="button is-success dashbtn" id="edbtn" type="submit">
-            <a href="/edit-steps">Edit</a>
+          {{calorie_count}} <br><button class="button is-success dashbtn" id="edbtn" type="submit">
+            <a href="/edit_food/{{id}}">Edit</a>
           </button> <button class="button is-danger" id="edbtn" type="submit">
-            <a href="/delete-steps">Delete</a>
-          </button>
+            <a href="/delete-entry">Delete</a>
+          </button></li>
+      {{/each}}
     </ul>
 
   </div>
@@ -81,3 +81,5 @@
 
   </div>
 </footer>
+
+<script src="/JS/delete-entry.js"></script>

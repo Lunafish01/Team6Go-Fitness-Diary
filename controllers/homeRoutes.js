@@ -227,43 +227,26 @@ router.get("/water", withAuth, async (req, res) => {
 });
 
 // edit food route
-router.get("/edit-food/:id", withAuth, async (req, res) => {
+router.get("/edit_food/:id", withAuth, async (req, res) => {
   try {
-    const foodId = req.params.id;
 
-    // Find the logged in user based on the session ID
-    const userData = await User.findByPk(req.session.user_id, {
-      attributes: { exclude: ["password"] },
+    const foodData = await Food.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          attributes: ['username'],
+        },
+      ],
     });
-
-    const user = userData.get({ plain: true });
-
-    // Fetch the specific food entry by ID for the logged-in user
-    const foodData = await Food.findOne({
-      where: {
-        id: foodId,
-        user_id: req.session.user_id, // Assuming there's a foreign key relationship between User and Food models
-      },
-      attributes: ["id", "food_name", "serving_amount", "calorie_count"],
-    });
-
-    if (!foodData) {
-      // Handle case where the food entry is not found
-      res.status(404).render('error', { error: 'Food entry not found' });
-      return;
-    }
 
     const food = foodData.get({ plain: true });
 
-    // Render the edit-post view with the specific food data
-    res.render("edit-post", {
-      user,
+    res.render('edit_food', {
       food,
-      loggedIn: req.session.loggedIn,
+      logged_in: req.session.logged_in
     });
   } catch (err) {
-    console.error("Error rendering edit-food page:", err);
-    res.status(500).render('error', { error: 'Internal Server Error' });
+    res.status(500).json(err);
   }
 });
 

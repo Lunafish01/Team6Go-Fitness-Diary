@@ -1,7 +1,9 @@
+
+<body>
 <h2 class="title card-header">Edit Food Entry</h2>
-<form class="card-body edit-food-form" action="/edit" method="post">
+<form class="card-body edit-food-form" action="/edit-food" method="post">
      <div class="form-row">
-        <label for="meal-name" class="form-label subtitle is-5">Food: {{food.food_name}}</label>
+        <label for="meal-name" class="form-label subtitle is-5">Food:</label>
 <input type="text" id="meal-name" name="meal-name" class="form-input form-control" value="{{food.food_name}}" />
     </div>
      <div class="form-row">
@@ -15,12 +17,11 @@
 
     <div class="field">
         <div class="control">
-            <button type="submit" class="button is-primary"><a href="/dashboard">Update Entry</a></button>
+            <button type="submit" class="button is-primary"><a href="/profile">Update Entry</a></button>
         </div>
     </div>
 </form>
+</body>
 
 
-
-<script src="/js/edit-entry.js"></script>
-<script src="/js/delete-entry.js"></script>
+<script src="/JS/edit-entry.js"></script>
