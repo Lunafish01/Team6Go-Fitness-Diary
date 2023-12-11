@@ -9,15 +9,20 @@
 </section>
 
 <section>
-  <div class="section is-fluid" id="profile-container">
-    <div class="level">
-      {{! put steps, water, and food entry buttons here to take to matching handlebars  }}
-      <button class="btn-food" type="submit" ><a href="/food">Add Food Entry</a></button>
+ <div class="section is-fluid" id="profile-container">
+  <div class="level is-mobile"> <!-- Add is-mobile class for small screens -->
+    {{! put steps, water, and food entry buttons here to take to matching handlebars  }}
+    <div class="level-item">
+      <button class="btn-food" type="submit"><a href="/food">Add Food Entry</a></button>
+    </div>
+    <div class="level-item">
       <button class="btn-steps" type="submit"><a href="/steps">Add Steps Entry</a></button>
+    </div>
+    <div class="level-item">
       <button class="btn-water" type="submit"><a href="/water">Add Water Entry</a></button>
     </div>
-
   </div>
+</div>
 
   {{! To loop through entries for only logged in user }}
   <div id="data">
