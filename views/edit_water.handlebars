@@ -1,0 +1,42 @@
+
+  <div class="hero" style="background-image: url(/images/water.jpg)">
+    <p id="HeroTitle"><strong>Track your water <span class="intake">intake</span>...</strong></p>
+</div> 
+
+<h2 class="title is-4 container is-fluid">Edit Water Entry</h2>
+<form class="field container is-fluid edit-water-form" id="new-water-entry" action="/edit_water" method="post">
+     <div class="form-row">
+         <label for="date" class="form-label subtitle is-5"><strong>Date:</strong></label>
+        <input type="date" id="date" name="date" class="form-input form-control" value="{{water.date}}" />
+    </div>
+     <div class="form-row">
+         <label class="form-label subtitle is-5" for="daily-goal"><strong>Daily Goal:</strong></label>
+        <input id="daily-goal" name="daily-goal" class="form-input form-control" value="{{water.daily_goal}}" />
+    </div>
+     <div class="form-row">
+         <label class="form-label subtitle is-5" for="actual-intake"><strong>Actual Intake:</strong></label>
+        <input id="actual-intake" name="actual-intake" class="form-input form-control" value="{{water.actual_intake}}" />
+    </div>
+
+    <div class="field">
+        <div class="control">
+            <button type="submit" class="btn-water"><strong>Update Entry</strong></button>
+        </div>
+    </div>
+</form>
+
+<footer>
+      <div class="content has-text-centered">
+          <p>
+              
+              <h3 id="TEAMNAME">TEAM6GO!</h3>
+              <a href="https://github.com/erica-210"><strong>Erica M San Miguel</strong></a> 
+              <a href="https://github.com/Lunafish01"><strong>Joshua Luna</strong></a> 
+              <a href="https://github.com/mcalvario"><strong>Maribel Calvario</strong></a> 
+          </p>
+   
+      </div>
+  </footer>
+
+
+<script src="/JS/edit-water.js"></script>

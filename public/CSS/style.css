@@ -210,7 +210,6 @@ li {
 }
 
 /* Button on water html */
-.button,
 .btn-water {
   color: blue;
   background-color: rgb(0, 149, 255);
@@ -377,4 +376,8 @@ a:hover {
 
 #dashwater {
   background-color: antiquewhite;
+}
+
+.fdheader {
+  text-align: center;
 }
