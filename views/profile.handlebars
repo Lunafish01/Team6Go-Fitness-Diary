@@ -29,7 +29,7 @@
           {{step_count}},<br> Calories Burned:
           {{calories_burned}},<br> Distance:
           {{distance_travelled}}<br><button class="button is-success dashbtn" id="edbtn" type="submit">
-            <a href="/edit-steps">Edit</a>
+            <a href="/edit_steps/{{id}}">Edit</a>
           </button> <button class="button is-danger" id="edbtn" type="submit">
             <a href="/delete-steps">Delete</a>
           </button></li>
@@ -42,10 +42,10 @@
       {{#each water}}
         <li>Date:
           {{date}},<br> Daily Goal:
-          {{daily_goal}},<br> Water Consumed:
-          {{actual_intake}}</li>
+          {{daily_goal}} oz,<br> Water Consumed:
+          {{actual_intake}} oz</li>
       {{/each}}<br><button class="button is-success dashbtn" id="edbtn" type="submit">
-            <a href="/edit-water">Edit</a>
+            <a href="/edit_water/{{id}}">Edit</a>
           </button> <button class="button is-danger" id="edbtn" type="submit">
             <a href="/delete-water">Delete</a>
           </button>

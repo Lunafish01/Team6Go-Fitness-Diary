@@ -4,18 +4,18 @@
 </div> 
 
 <h2 class="card-header">Edit Water Entry</h2>
-<form class="card-body edit-water-form" action="/edit_water" method="post">
+<form class="card-body edit-water-form" action="/edit-water" method="post">
      <div class="form-row">
          <label for="date" class="form-label subtitle is-5">Date:</label>
-        <input type="date" id="date" name="date" class="form-input form-control" value="{{Water.date}}" />
+        <input type="date" id="date" name="date" class="form-input form-control" value="{{water.date}}" />
     </div>
      <div class="form-row">
          <label class="form-label subtitle is-5" for="daily-goal">Daily Goal:</label>
-        <input id="daily-goal" name="daily-goal" class="form-input form-control" value="{{Water.daily_goal}}" />
+        <input id="daily-goal" name="daily-goal" class="form-input form-control" value="{{water.daily_goal}}" />
     </div>
      <div class="form-row">
          <label class="form-label subtitle is-5" for="actual-intake">Actual Intake:</label>
-        <input id="actual-intake" name="actual-intake" class="form-input form-control" value="{{Water.actual_intake}}" />
+        <input id="actual-intake" name="actual-intake" class="form-input form-control" value="{{water.actual_intake}}" />
     </div>
 
     <div class="field">

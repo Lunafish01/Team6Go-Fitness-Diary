@@ -4,9 +4,9 @@ const editEntryHandler = async (event) => {
   // Gather updated data from the form
   const updatedData = {
     date: document.getElementById("date").value.trim(),
-    steps: document.getElementById("step-count").value.trim(),
-    calories: document.getElementById("calories-burned").value.trim(),
-    distance: document.getElementById("distance-travelled").value.trim(),
+    step_count: document.getElementById("step-count").value.trim(),
+    calories_burned: document.getElementById("calories-burned").value.trim(),
+    distance_travelled: document.getElementById("distance-travelled").value.trim(),
   }
 
   const id = window.location.toString().split("/")[
@@ -15,7 +15,7 @@ const editEntryHandler = async (event) => {
 
 
   console.log("Updated Data:", updatedData);
-  console.log("Food ID:", id);
+  console.log("Water ID:", id);
 
   const response = await fetch(`/api/steps/${id}`, {
     method: "PUT",
