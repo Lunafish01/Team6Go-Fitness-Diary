@@ -40,10 +40,6 @@ router.get("/:id", async (req, res) => {
             "calories_burned",
             "distance_travelled",
           ],
-          // include: {
-          //   model: Water,
-          //   attributes: ["date"],
-          // },
         },
       ],
     });
