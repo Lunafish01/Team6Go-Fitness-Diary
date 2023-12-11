@@ -12,10 +12,6 @@ const editEntryHandler = async (event) => {
     window.location.toString().split("/").length - 1
   ];
 
-  const requestData = {
-    id: id,
-    updatedData: updatedData,
-  };
 
   console.log("Updated Data:", updatedData);
   console.log("Food ID:", id);
@@ -23,7 +19,7 @@ const editEntryHandler = async (event) => {
   const response = await fetch(`/api/food/${id}`, {
     method: "PUT",
     body: JSON.stringify(
-     requestData),
+     updatedData),
     headers: {
       "Content-Type": "application/json",
     },
@@ -32,13 +28,14 @@ const editEntryHandler = async (event) => {
   console.log("API Response:", response);
 
   if (response.ok) {
-    document.location.replace("/profile");
+    document.location.replace("/dashboard");
   } else {
     alert(response.statusText);
   }
 };
 
 document.addEventListener("DOMContentLoaded", function () {
+  document;
   document
     .querySelector(".edit-food-form")
     .addEventListener("submit", editEntryHandler);

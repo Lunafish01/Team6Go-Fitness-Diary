@@ -1,27 +1,46 @@
-
 <body>
-<h2 class="title card-header">Edit Food Entry</h2>
-<form class="card-body edit-food-form" action="/edit-food" method="post">
-     <div class="form-row">
-        <label for="meal-name" class="form-label subtitle is-5">Food:</label>
-<input type="text" id="meal-name" name="meal-name" class="form-input form-control" value="{{food.food_name}}" />
+     <div class="hero" style="background-image: url(/images/food2.jpg)">
+        <p id="HeroTitle2">Track your meals...</p>
+    </div> 
+  <h2 class="title is-4 container is-fluid">Edit Food Entry</h2>
+  <form class="field container is-fluid edit-food-form" id="new-food-entry2" action="/edit-food" method="post">
+    <div class="form-row">
+      <label for="meal-name" class="form-label subtitle is-5"><strong>Food:</strong></label>
+      <input
+        type="text"
+        id="meal-name"
+        name="meal-name"
+        class="form-input form-control"
+        value="{{food.food_name}}"
+      />
     </div>
-     <div class="form-row">
-        <label for="serving-size" class="form-label subtitle is-5">Serving Size:</label>
-<input type="text" id="serving-size" name="serving-size" class="form-input form-control" value="{{food.serving_amount}}" />
+    <div class="form-row">
+      <label for="serving-size" class="form-label subtitle is-5"><strong>Serving Size:</strong></label>
+      <input
+        type="text"
+        id="serving-size"
+        name="serving-size"
+        class="form-input form-control"
+        value="{{food.serving_amount}}"
+      />
     </div>
-     <div class="form-row">
-        <label for="calories" class="form-label subtitle is-5">Calories:</label>
-<input type="text" id="calories" name="calories" class="form-input form-control" value="{{food.calorie_count}}" />
+    <div class="form-row">
+      <label for="calories" class="form-label subtitle is-5"><strong>Calories:</strong></label>
+      <input
+        type="text"
+        id="calories"
+        name="calories"
+        class="form-input form-control"
+        value="{{food.calorie_count}}"
+      />
     </div>
 
     <div class="field">
-        <div class="control">
-            <button type="submit" class="button is-primary"><a href="/profile">Update Entry</a></button>
-        </div>
+      <div class="control">
+        <button type="submit" class="button is-primary"><a>Update Entry</a></button>
+      </div>
     </div>
-</form>
+  </form>
 </body>
-
 
 <script src="/JS/edit-entry.js"></script>
