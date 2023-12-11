@@ -34,6 +34,7 @@
             <a href="/delete-steps">Delete</a>
           </button></li>
       {{/each}}
+      
     </ul>
 
     {{! Display water entries }}
@@ -44,11 +45,12 @@
           {{date}},<br> Daily Goal:
           {{daily_goal}} oz,<br> Water Consumed:
           {{actual_intake}} oz</li>
-      {{/each}}<br><button class="button is-success dashbtn" id="edbtn" type="submit">
+         <button class="button is-success dashbtn" id="edbtn" type="submit">
             <a href="/edit_water/{{id}}">Edit</a>
           </button> <button class="button is-danger" id="edbtn" type="submit">
             <a href="/delete-water">Delete</a>
           </button>
+      {{/each}}
     </ul>
 
     {{! Display food entries }}
