@@ -140,9 +140,10 @@ li {
 
 /*data on profile handlebars*/
 #data {
-  font-size: 30px;
+  font-size: 20px;
   border: solid rgb(52, 132, 217);
   padding: 20px;
+  margin: 20px;
 }
 
 /* Title on the main handlebars
@@ -371,4 +372,9 @@ a:hover {
   border: black 1px solid;
   border-width: 5px;
   border-radius: 20px;
+}
+
+
+#dashwater {
+  background-color: antiquewhite;
 }

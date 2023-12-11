@@ -15,14 +15,21 @@ router.get("/dashboard", withAuth, async (req, res) => {
         "calories_burned",
         "distance_travelled",
       ],
+      include: [{ model: User, attributes: ["username"] }],
     });
 
     const waterPromise = Water.findAll({
       attributes: ["id", "date", "daily_goal", "actual_intake"],
+      include: [{ model: User, attributes: ["username"] }],
     });
 
     const foodPromise = Food.findAll({
       attributes: ["id", "food_name", "serving_amount", "calorie_count"],
+      include: [{ model: User, attributes: ["username"] }],
+    });
+
+    const user = await User.findByPk(req.session.user_id, {
+      attributes: ["username"],
     });
 
     // Wait for all promises to resolve
@@ -47,6 +54,7 @@ router.get("/dashboard", withAuth, async (req, res) => {
       steps,
       water,
       food,
+      user: user ? user.get({ plain: true }) : null,
       loggedIn: req.session.loggedIn,
     });
   } catch (err) {
