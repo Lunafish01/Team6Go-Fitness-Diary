@@ -1,5 +1,9 @@
-<h2 class="card-header">Edit Food Entry</h2>
-<form class="card-body edit-water-form">
+ <div class="hero" style="background-image: url(/images/food2.jpg)">
+        <p id="HeroTitle2">Track your meals...</p>
+    </div> 
+
+<h2 class="card-header">Edit Water Entry</h2>
+<form class="card-body edit-water-form" action="/edit_water" method="post">
      <div class="form-row">
          <label for="date" class="form-label subtitle is-5">Date:</label>
         <input type="date" id="date" name="date" class="form-input form-control" value="{{Water.date}}" />
@@ -16,7 +20,6 @@
     <div class="field">
         <div class="control">
             <button type="submit" class="button is-primary">Update Entry</button>
-            <button type="button" class="button is-danger delete-post-btn">Delete Post</button>
         </div>
     </div>
 </form>
@@ -25,4 +28,3 @@
 
 
 <script src="/js/edit-water.js"></script>
-<script src="/js/delete-entry.js"></script>
