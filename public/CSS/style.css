@@ -225,7 +225,6 @@ li {
 }
 
 /* Button on water html */
-.button,
 .btn-water {
   background-color: rgb(127, 176, 227);
   border-radius: 300px 300px 300px 300px;
@@ -365,4 +364,9 @@ a:hover {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-weight: 900;
   font-size: 30px;
+  background-color: antiquewhite;
+}
+
+.fdheader {
+  text-align: center;
 }
