@@ -1,6 +1,6 @@
 /* Background color of body on water handlebars */
 body {
-  background-color: antiquewhite;
+  background-color: aliceblue;
 }
 
 /* Hero on water handlebars */
@@ -8,6 +8,7 @@ body {
   height: 600px;
   width: 100%;
   border-radius: 20px 20px 20px 20px;
+  box-shadow: 5px 5px 5px grey;
   background-repeat: no-repeat;
   background-position: right;
   background-size: cover;
@@ -47,11 +48,12 @@ body {
 
 /* Main Title at the top of water handlebars */
 #HeroTitle {
-  color: rgb(218, 232, 222);
+  color: green;
   font-size: 50px;
-  text-shadow: 5px 5px 5px black;
+  text-shadow: 2px 2px 2px black;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: 900;
   letter-spacing: 15px;
   padding: 10px 20px;
   line-height: 1;
@@ -61,7 +63,7 @@ body {
 /* Hero Title at the top of login handlebars */
 #HeroTitle1 {
   color: green;
-  text-shadow: 5px 5px 5px darkgrey;
+  text-shadow: 2px 2px 2px black;
   font-size: 100px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
@@ -74,11 +76,12 @@ body {
 
 /* Title at the top on food handlebars hero */
 #HeroTitle2 {
-  color: rgb(218, 232, 222);
+  color: green;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: 900;
   font-size: 50px;
-  text-shadow: 5px 5px 5px black;
+  text-shadow: 2px 2px 2px black;
   display: flex;
   justify-content: flex-end;
   letter-spacing: 15px;
@@ -88,11 +91,12 @@ body {
 
 /* Title at the top on steps handlebars hero */
 #HeroTitle3 {
-  color: rgb(218, 232, 222);
-  text-shadow: 5px 5px 5px black;
+  color: green;
+  text-shadow: 2px 2px 2px black;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: 50px;
+  font-weight: 900;
   letter-spacing: 15px;
   padding: 10px 20px;
   line-height: 1;
@@ -122,40 +126,51 @@ li {
 
 /*data on profile handlebars*/
 .hero-body {
-  color: black;
+  color: green;
   border-radius: 20px;
-  border: solid rgb(246, 190, 6);
+  border: solid rgb(52, 132, 217);
+  background-color: aliceblue;
+  box-shadow: 5px 5px 5px grey;
 }
 
 /*data on profile handlebars*/
 .title1 {
-  color: black;
-  position: center;
   text-align: center;
-  font-size: 30px;
-  line-height: 1.5;
-  padding: 20px 20px 20px 20px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 50px;
+  font-weight: 900;
+  line-height: 1;
   border-radius: 20px;
 }
 
 /*data on profile handlebars*/
 #data {
   font-size: 20px;
+  border: solid rgb(127, 176, 227);
+  background-color: rgb(127, 176, 227);
+  box-shadow: 5px 5px 5px grey;
+  padding: 20px;
+  margin: 20px;
+}
+.data-2 {
+  font-size: 20px;
   border: solid rgb(52, 132, 217);
+  border-radius: 20px;
+  background-color: aliceblue;
+  box-shadow: 5px 5px 5px grey;
   padding: 20px;
   margin: 20px;
 }
 
-/* Title on the main handlebars
-.title {
-  color: rgb(52, 132, 217);
-  position: center;
-  text-align: center;
-  font-size: 40px;
-  letter-spacing: 6px;
-
-  line-height: 1.5;
-} */
+.data-3 {
+  font-size: 20px;
+  border: solid rgb(127, 176, 227);
+  border-radius: 20px;
+  background-color: rgb(127, 176, 227);
+  box-shadow: 5px 5px 5px grey;
+  padding: 20px;
+  margin: 20px;
+}
 
 /* subtitle on the water handlebars "add water intake" */
 .title2 {
@@ -211,15 +226,13 @@ li {
 
 /* Button on water html */
 .btn-water {
-  color: blue;
-  background-color: rgb(0, 149, 255);
-  border-radius: 1px 300px 300px 300px;
-  padding: 15px 5px;
+  background-color: rgb(127, 176, 227);
+  border-radius: 300px 300px 300px 300px;
+  padding: 15px 15px;
   text-align: center;
   text-decoration: none;
   font-size: 16px;
-  display: inline-block;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 5px 5px 5px 0 grey;
   margin-left: 10px;
   border: none;
 }
@@ -227,15 +240,15 @@ li {
 /* Button on food html*/
 .button2,
 .btn-food {
-  color: rgb(144, 218, 152);
-  background-color: rgb(6, 57, 11);
-  border-radius: 20px 20px 20px 20px;
+  background-color: rgb(50, 162, 50);
+  border-radius: 300px 300px 300px 300px;
   padding: 15px 15px;
   text-align: center;
   text-decoration: none;
   font-size: 16px;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 5px 5px 5px 0 grey;
   margin-left: 10px;
+  border: none;
 }
 
 /* Button on steps html*/
@@ -243,12 +256,12 @@ li {
 .btn-steps {
   color: rgb(12, 12, 12);
   background-color: rgb(246, 190, 6);
-  border-radius: 20px 20px 20px 20px;
+  border-radius: 300px 300px 300px 300px;
   padding: 15px 15px;
   text-align: center;
   text-decoration: none;
   font-size: 16px;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 5px 5px 5px 0 grey;
   margin-left: 10px;
   border: none;
 }
@@ -259,49 +272,16 @@ li {
 }
 
 /* Footer on water handlebars */
-.footer {
-  color: rgb(10, 126, 221);
-  /*background-color: black;*/
-  height: 25px;
+footer {
+  height: 45px;
   text-align: center;
-  padding: 10px;
-}
-
-/* footer on food handlebars */
-.footer {
-  color: rgb(10, 91, 22);
-  text-align: center;
-  padding: 10px;
 }
 
 /* TEAMNAME at the bottom of water handlebars */
-#TEAMNAME {
+.TEAMNAME {
   color: black;
   font-size: 25px;
   letter-spacing: 2px;
-  padding: 0px 10px;
-  line-height: 1;
-  text-align: center;
-  position: center;
-}
-
-/* TEAMNAME at the bottom of water handlebars */
-#TEAMNAME2 {
-  color: rgb(19, 104, 25);
-  font-size: 25px;
-  letter-spacing: 2px;
-  padding: 0px 10px;
-  line-height: 1;
-  text-align: center;
-  position: center;
-}
-
-#TEAMNAME3 {
-  color: black;
-  font-size: 25px;
-  letter-spacing: 2px;
-  padding: 0px 10px;
-  line-height: 1;
   text-align: center;
   position: center;
 }
@@ -309,11 +289,8 @@ li {
 /* Our names at the bottom of water handlebars */
 a {
   text-align: center;
-  position: center;
   font-size: 20px;
   padding: 0px 10px;
-  color: rgb(32, 66, 99);
-  text-decoration: none;
 }
 
 /*hover over names at bottom of water handlebars */
@@ -373,8 +350,20 @@ a:hover {
   border-radius: 20px;
 }
 
-
 #dashwater {
+  background-color: aliceblue;
+}
+
+.username {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: 900;
+  font-size: 30px;
+}
+
+.email {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: 900;
+  font-size: 30px;
   background-color: antiquewhite;
 }
 
