@@ -258,6 +258,54 @@ router.get("/edit_food/:id", withAuth, async (req, res) => {
   }
 });
 
+// edit water route
+router.get("/edit_water/:id", withAuth, async (req, res) => {
+  try {
+
+    const waterData = await Water.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          attributes: ['username'],
+        },
+      ],
+    });
+
+    const water = waterData.get({ plain: true });
+
+    res.render('edit_water', {
+      water,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+// edit steps route
+router.get("/edit_steps/:id", withAuth, async (req, res) => {
+  try {
+
+    const stepsData = await Steps.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          attributes: ['username'],
+        },
+      ],
+    });
+
+    const steps = stepsData.get({ plain: true });
+
+    res.render('edit_steps', {
+      steps,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 // GET login route direct user to login page
 router.get("/", (req, res) => {
   if (req.session.logged_in) {

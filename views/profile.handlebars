@@ -9,15 +9,20 @@
 </section>
 
 <section>
-  <div class="section is-fluid" id="profile-container">
-    <div class="level">
-      {{! put steps, water, and food entry buttons here to take to matching handlebars  }}
-      <button class="btn-food" type="submit" ><a href="/food">Add Food Entry</a></button>
+ <div class="section is-fluid" id="profile-container">
+  <div class="level is-mobile"> <!-- Add is-mobile class for small screens -->
+    {{! put steps, water, and food entry buttons here to take to matching handlebars  }}
+    <div class="level-item">
+      <button class="btn-food" type="submit"><a href="/food">Add Food Entry</a></button>
+    </div>
+    <div class="level-item">
       <button class="btn-steps" type="submit"><a href="/steps">Add Steps Entry</a></button>
+    </div>
+    <div class="level-item">
       <button class="btn-water" type="submit"><a href="/water">Add Water Entry</a></button>
     </div>
-
   </div>
+</div>
 
   {{! To loop through entries for only logged in user }}
   <div class="data-2">
@@ -29,11 +34,12 @@
           {{step_count}},<br> Calories Burned:
           {{calories_burned}},<br> Distance:
           {{distance_travelled}}<br><button class="button is-success dashbtn" id="edbtn" type="submit">
-            <a href="/edit-steps">Edit</a>
+            <a href="/edit_steps/{{id}}">Edit</a>
           </button> <button class="button is-danger" id="edbtn" type="submit">
             <a href="/delete-steps">Delete</a>
           </button></li>
       {{/each}}
+      
     </ul>
 
     {{! Display water entries }}
@@ -42,13 +48,14 @@
       {{#each water}}
         <li>Date:
           {{date}},<br> Daily Goal:
-          {{daily_goal}},<br> Water Consumed:
-          {{actual_intake}}</li>
-      {{/each}}<br><button class="button is-success dashbtn" id="edbtn" type="submit">
-            <a href="/edit-water">Edit</a>
+          {{daily_goal}} oz,<br> Water Consumed:
+          {{actual_intake}} oz</li>
+         <button class="button is-success dashbtn" id="edbtn" type="submit">
+            <a href="/edit_water/{{id}}">Edit</a>
           </button> <button class="button is-danger" id="edbtn" type="submit">
             <a href="/delete-water">Delete</a>
           </button>
+      {{/each}}
     </ul>
 
     {{! Display food entries }}
